@@ -1,0 +1,15 @@
+Sales Growth PQ = IF(
+  ( ISFILTERED('Calendar'[Quarter]) && (ISFILTERED('Calendar'[Month]) = FALSE() && ISFILTERED(Calendar[Date]) = FALSE()) ), 
+  DIVIDE(  
+    SUM(Sales[SalesAmount]) -
+    CALCULATE(
+      SUM(Sales[SalesAmount]),
+      PREVIOUSQUARTER(Calendar[Date])
+    ), 
+    CALCULATE(
+      SUM(Sales[SalesAmount]),
+      PREVIOUSQUARTER(Calendar[Date])
+    )
+  ),
+  BLANK()
+)

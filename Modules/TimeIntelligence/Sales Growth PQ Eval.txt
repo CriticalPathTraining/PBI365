@@ -1,0 +1,8 @@
+Sales Growth PQ Eval = 
+IF( ISNUMBER([Sales Growth PQ]), 
+	SWITCH(TRUE(),
+	  ([Sales Growth PQ] >= 0.2), "EXCELLECT",
+	  ([Sales Growth PQ] >= 0.1), "GOOD",
+	  ([Sales Growth PQ] >= 0), "OK",
+	  ([Sales Growth PQ] <  0), "BAD"
+  ))

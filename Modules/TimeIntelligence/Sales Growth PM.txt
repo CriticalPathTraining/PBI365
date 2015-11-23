@@ -1,0 +1,15 @@
+Sales Growth PM = IF(
+  ( ISFILTERED(Calendar[Month]) && ISFILTERED(Calendar[Date]) = FALSE() ), 
+  DIVIDE(  
+    SUM(Sales[SalesAmount]) -
+    CALCULATE(
+      SUM(Sales[SalesAmount]),
+      PREVIOUSMONTH(Calendar[Date])
+    ), 
+    CALCULATE(
+      SUM(Sales[SalesAmount]),
+      PREVIOUSMONTH(Calendar[Date])
+    )
+  ),
+  BLANK()
+)

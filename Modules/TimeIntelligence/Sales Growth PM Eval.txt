@@ -1,0 +1,9 @@
+Sales Growth PM Eval = 
+IF( ISNUMBER([Sales Growth PM]), 
+	SWITCH(TRUE(),
+	  ([Sales Growth PM] >= 0.2), "EXCELLENT",
+	  ([Sales Growth PM] >= 0.1), "GOOD",
+	  ([Sales Growth PM] >= 0), "OK",
+	  ([Sales Growth PM] >= -0.1), "BAD",
+	  ([Sales Growth PM] <  -0.1), "AWFUL"
+  ))
