@@ -1,0 +1,39 @@
+﻿{
+  
+  "name": "Campaign Donations",
+  "tables": [
+    {
+      "name": "Donations",
+      "columns": [
+        {
+          "name": "ID",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        },
+        {
+          "name": "City",
+          "dataType": "string"
+        },
+        {
+          "name": "State",
+          "dataType": "string"
+        },
+        {
+          "name": "Zip",
+          "dataType": "string"
+        },
+        {
+          "name": "Gender",
+          "dataType": "string"
+        },
+        {
+          "name": "Amount",
+          "dataType": "Double"
+        }
+      ]
+    }
+  ]
+}
