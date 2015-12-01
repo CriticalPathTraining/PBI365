@@ -1,0 +1,12 @@
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\WingtipDataGenerator.exe.config
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\WingtipDataGenerator.exe
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\WingtipDataGenerator.pdb
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\EntityFramework.dll
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\EntityFramework.SqlServer.dll
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\EntityFramework.xml
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\bin\Debug\EntityFramework.SqlServer.xml
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\obj\Debug\WingtipDataGenerator.csprojResolveAssemblyReference.cache
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\obj\Debug\WingtipDataGenerator.exe
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\obj\Debug\WingtipDataGenerator.pdb
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\obj\Debug\WingtipDataGenerator.Migrations.FirstTime.resources
+C:\DevProjects\WingtipDataGenerator\WingtipDataGenerator\obj\Debug\WingtipDataGenerator.csproj.GenerateResource.Cache
