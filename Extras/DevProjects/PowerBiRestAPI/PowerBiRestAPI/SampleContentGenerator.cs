@@ -788,7 +788,8 @@ namespace PowerBiRestAPI {
     } 
 
     public static IEnumerable<DonationData> GetDonationList() {
-      return GetDonationList(10);
+      int numberOfDonations = WingtipRandom.Next(10, 120);
+      return GetDonationList(2);
     }
 
     public static IEnumerable<DonationData> GetDonationList(int DonationCount) {

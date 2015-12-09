@@ -15,15 +15,10 @@ namespace PowerBiRestAPI {
       PowerBiWorkspaceManager workspace = new PowerBiWorkspaceManager();
 
 
-      //workspace.DisplayDatasets();
+      // workspace.DisplayDatasets();
+      workspace.CreateDataset();
 
-     workspace.CreateDataset();
-      
-      while (true) {
-        workspace.AddRows();
-        System.Threading.Thread.Sleep(3000);
-
-      }
+      workspace.AddRows();
 
 
 

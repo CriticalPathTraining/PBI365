@@ -20,7 +20,6 @@ namespace PowerBiRestAPI.Models {
     public List<Dataset> value { get; set; }
   }
 
-
   public class Contribution {
     public int ID { get; set; }
     public string Name { get; set; }
@@ -34,8 +33,6 @@ namespace PowerBiRestAPI.Models {
   class ContributionSet {
     public Contribution[] rows { get; set; }
   }
-
-
 
   class PowerBiWorkspaceManager {
 
@@ -142,10 +139,32 @@ namespace PowerBiRestAPI.Models {
       //Console.WriteLine(" - Tenant Phone: " + TenantDetails.telephoneNumber);
     }
 
+    public bool DatasetExist(string datasetName) {
+      string restUrlDatasets = rootUrlPowerBiService + "datasets/";
+
+      string json = ExecuteGetRequest(restUrlDatasets);     
+      DatasetCollection datasets = JsonConvert.DeserializeObject<DatasetCollection>(json);
+      foreach (var ds in datasets.value) {
+        if (ds.name.Equals(datasetName)) {
+          DonationsDatasetId = ds.id;
+          return true;
+        }
+      }
+
+      return false;
+    }
+
     string DonationsDatasetId = string.Empty;
 
     public void CreateDataset() {
 
+      string datasetName = "Campaign Donations";
+      if (DatasetExist(datasetName)) {
+        Console.WriteLine("Dataset already exists");
+        return;
+      }
+
+      Console.WriteLine("Creating Dataset");
       string restUrlDatasets = rootUrlPowerBiService + "datasets";
       string jsonNewDataset = Properties.Resources.NewDataset_json;
 
@@ -159,16 +178,21 @@ namespace PowerBiRestAPI.Models {
 
     }
 
+    private int donationId = 0;
+
     public void AddRows() {
       Console.WriteLine("Adding rows...");
 
 
-      var donarList = DataFactory.GetDonationList(100);
+      var donarList = DataFactory.GetDonationList();
 
       List<Contribution> contributionList = new List<Contribution>();
 
       foreach (var donar in donarList) {
+        Console.WriteLine("Adding " + donar.FirstName + " " + donar.LastName);
+        donationId += 1;
         contributionList.Add(new Contribution {
+          ID = donationId,
           Name = donar.FirstName + " " + donar.LastName,
           City = donar.City,
           State = donar.State,
@@ -178,13 +202,12 @@ namespace PowerBiRestAPI.Models {
         });
       }
 
-      
+
       ContributionSet contributionSet = new ContributionSet {
         rows = contributionList.ToArray<Contribution>()
       };
 
       string jsonRows = JsonConvert.SerializeObject(contributionSet);
-      Console.WriteLine(jsonRows);
 
       string restUrlDatasets = rootUrlPowerBiService + "datasets";
       string restUrlTableRows = string.Format("{0}/{1}/tables/Donations/rows", restUrlDatasets, DonationsDatasetId);
