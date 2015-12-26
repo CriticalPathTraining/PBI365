@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using System.IO;
 
 namespace PowerBiRestAPI.Models {
 
@@ -21,13 +22,14 @@ namespace PowerBiRestAPI.Models {
   }
 
   public class Contribution {
-    public int ID { get; set; }
-    public string Name { get; set; }
+    public int ContributionID { get; set; }
+    public string Contributor { get; set; }
     public string City { get; set; }
     public string State { get; set; }
-    public string Zip { get; set; }
+    public int Zip { get; set; }
     public string Gender { get; set; }
-    public double Amount { get; set; }
+    public string Time { get; set; }
+    public decimal Amount { get; set; }
   }
 
   class ContributionSet {
@@ -59,7 +61,7 @@ namespace PowerBiRestAPI.Models {
       var userAuthnResult = authenticationContext.AcquireToken(resourceUriPowerBiService,
                                                                clientID,
                                                                new Uri(redirectUri),
-                                                               PromptBehavior.Auto);
+                                                               PromptBehavior.RefreshSession);
       // cache access token in AccessToken field
       AccessToken = userAuthnResult.AccessToken;
 
@@ -106,6 +108,20 @@ namespace PowerBiRestAPI.Models {
       }
     }
 
+    private string ExecuteDeleteRequest(string restUri) {
+      HttpClient client = new HttpClient();
+      client.DefaultRequestHeaders.Add("Accept", "application/json");
+      client.DefaultRequestHeaders.Add("Authorization", "Bearer " + AccessToken);
+      HttpResponseMessage response = client.DeleteAsync(restUri).Result;
+
+      if (response.IsSuccessStatusCode) {
+        return response.Content.ReadAsStringAsync().Result;
+      }
+      else {
+        Console.WriteLine("ERROR during REST call with Delete");
+        return string.Empty;
+      }
+    }
 
     #endregion
 
@@ -142,11 +158,11 @@ namespace PowerBiRestAPI.Models {
     public bool DatasetExist(string datasetName) {
       string restUrlDatasets = rootUrlPowerBiService + "datasets/";
 
-      string json = ExecuteGetRequest(restUrlDatasets);     
+      string json = ExecuteGetRequest(restUrlDatasets);
       DatasetCollection datasets = JsonConvert.DeserializeObject<DatasetCollection>(json);
       foreach (var ds in datasets.value) {
         if (ds.name.Equals(datasetName)) {
-          DonationsDatasetId = ds.id;
+          ContributionsDatasetId = ds.id;
           return true;
         }
       }
@@ -154,54 +170,75 @@ namespace PowerBiRestAPI.Models {
       return false;
     }
 
-    string DonationsDatasetId = string.Empty;
+    string ContributionsDatasetId = string.Empty;
 
     public void CreateDataset() {
 
-      string datasetName = "Campaign Donations";
+      string datasetName = "Campaign Contributions";
       if (DatasetExist(datasetName)) {
         Console.WriteLine("Dataset already exists");
+        DeleteRows();
+        PopulateHelperTables();
         return;
       }
 
-      Console.WriteLine("Creating Dataset");
+      Console.WriteLine("Creating Dataset...");
       string restUrlDatasets = rootUrlPowerBiService + "datasets";
       string jsonNewDataset = Properties.Resources.NewDataset_json;
 
       string json = ExecutePostRequest(restUrlDatasets, jsonNewDataset);
       Dataset dataset = JsonConvert.DeserializeObject<Dataset>(json);
 
-      DonationsDatasetId = dataset.id;
+      ContributionsDatasetId = dataset.id;
 
       Console.WriteLine("Dataset Created with ID of " + dataset.id);
       Console.WriteLine();
 
+      PopulateHelperTables();
+
     }
 
-    private int donationId = 0;
+    public void PopulateHelperTables() {
+
+      string restUrlDatasets = rootUrlPowerBiService + "datasets";
+
+      string jsonRowsGoal = @"{ ""rows"": [ { ""Value"": 1000000  }] }";
+      string restUrlTableRowsGoal = string.Format("{0}/{1}/tables/ContributionsGoal/rows", restUrlDatasets, ContributionsDatasetId);
+      ExecuteDeleteRequest(restUrlTableRowsGoal);
+      ExecutePostRequest(restUrlTableRowsGoal, jsonRowsGoal);
+
+      string jsonRowsMax = @"{ ""rows"": [ { ""Value"": 1250000  }] }";
+      string restUrlTableRowsMax = string.Format("{0}/{1}/tables/ContributionsMax/rows", restUrlDatasets, ContributionsDatasetId);
+      ExecuteDeleteRequest(restUrlTableRowsMax);
+      ExecutePostRequest(restUrlTableRowsMax, jsonRowsMax);
+    }
+
+    public void DeleteRows() {
+      Console.WriteLine("Deleting rows...");
+
+      string restUrlDatasets = rootUrlPowerBiService + "datasets";
+      string restUrlTableRows = string.Format("{0}/{1}/tables/Contributions/rows", restUrlDatasets, ContributionsDatasetId);
+      string json = ExecuteDeleteRequest(restUrlTableRows);
+
+    }
 
     public void AddRows() {
-      Console.WriteLine("Adding rows...");
-
-
-      var donarList = DataFactory.GetDonationList();
+      Console.Write(".");
 
       List<Contribution> contributionList = new List<Contribution>();
 
-      foreach (var donar in donarList) {
-        Console.WriteLine("Adding " + donar.FirstName + " " + donar.LastName);
-        donationId += 1;
+      foreach (var contribution in DataFactory.GetContributionList()) {
         contributionList.Add(new Contribution {
-          ID = donationId,
-          Name = donar.FirstName + " " + donar.LastName,
-          City = donar.City,
-          State = donar.State,
-          Zip = donar.ZipCode,
-          Gender = donar.Gender,
-          Amount = donar.Amount
+          ContributionID = contribution.ID,
+          Contributor = contribution.FirstName + " " + contribution.LastName,
+          City = contribution.City + ", " + contribution.State,
+          State = contribution.State,
+          Zip = contribution.ZipCode,
+          Gender = contribution.Gender,
+          Time = contribution.Time,
+          Amount = contribution.Amount
         });
       }
-
 
       ContributionSet contributionSet = new ContributionSet {
         rows = contributionList.ToArray<Contribution>()
@@ -210,9 +247,27 @@ namespace PowerBiRestAPI.Models {
       string jsonRows = JsonConvert.SerializeObject(contributionSet);
 
       string restUrlDatasets = rootUrlPowerBiService + "datasets";
-      string restUrlTableRows = string.Format("{0}/{1}/tables/Donations/rows", restUrlDatasets, DonationsDatasetId);
+      string restUrlTableRows = string.Format("{0}/{1}/tables/Contributions/rows", restUrlDatasets, ContributionsDatasetId);
       string json = ExecutePostRequest(restUrlTableRows, jsonRows);
 
+    }
+
+    public void CreateSampleCSV() {
+      Console.WriteLine("Create Sample CSV file...");
+
+      Directory.CreateDirectory(@"C:\Data");
+      var writer = File.CreateText(@"C:\Data\Contributions.csv");
+      writer.WriteLine("ID,Name,City,State,Zipcode,Gender,Amount");
+
+      foreach (var contribution in DataFactory.GetContributionList()) {
+        writer.WriteLine(contribution.ID.ToString() + "," +
+                         contribution.FirstName + " " + contribution.LastName + "," +
+                         contribution.City + "," + contribution.State + "," + contribution.ZipCode + "," +
+                         contribution.Gender + "," + contribution.Amount.ToString("C"));
+      }
+
+      writer.Flush();
+      writer.Dispose();
     }
   }
 }

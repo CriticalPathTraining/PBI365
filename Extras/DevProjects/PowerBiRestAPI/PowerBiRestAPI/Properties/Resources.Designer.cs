@@ -75,10 +75,10 @@ namespace PowerBiRestAPI.Properties {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///  
-        ///  &quot;name&quot;: &quot;Campaign Donations&quot;,
+        ///  &quot;name&quot;: &quot;Campaign Contributions&quot;,
         ///  &quot;tables&quot;: [
         ///    {
-        ///      &quot;name&quot;: &quot;Donations&quot;,
+        ///      &quot;name&quot;: &quot;Contributions&quot;,
         ///      &quot;columns&quot;: [
         ///        {
         ///          &quot;name&quot;: &quot;ID&quot;,

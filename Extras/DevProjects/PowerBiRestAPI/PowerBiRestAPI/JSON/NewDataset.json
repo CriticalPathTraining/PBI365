@@ -1,16 +1,16 @@
 ﻿{
-  
-  "name": "Campaign Donations",
+
+  "name": "Campaign Contributions",
   "tables": [
     {
-      "name": "Donations",
+      "name": "Contributions",
       "columns": [
         {
-          "name": "ID",
+          "name": "ContributionID",
           "dataType": "Int64"
         },
         {
-          "name": "Name",
+          "name": "Contributor",
           "dataType": "string"
         },
         {
@@ -23,10 +23,14 @@
         },
         {
           "name": "Zip",
-          "dataType": "string"
+          "dataType": "Int64"
         },
         {
           "name": "Gender",
+          "dataType": "string"
+        },
+        {
+          "name": "Time",
           "dataType": "string"
         },
         {
@@ -34,6 +38,25 @@
           "dataType": "Double"
         }
       ]
+    },
+    {
+      "name": "ContributionsGoal",
+      "columns": [
+        {
+          "name": "Value",
+          "dataType": "Double"
+        }
+      ]
+    },
+        {
+      "name": "ContributionsMax",
+      "columns": [
+        {
+          "name": "Value",
+          "dataType": "Double"
+        }
+      ]
     }
+
   ]
 }
