@@ -6,8 +6,8 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace PowerBiRestAPI {
- 
- #region "Classes for generating sample data for wingtip sales model"
+
+  #region "Classes for generating sample data for contribution demo"
 
   public class LocationData {
     public string City { get; set; }
@@ -39,28 +39,28 @@ namespace PowerBiRestAPI {
 
     public static void SetContributionGrowthPhase(int value) {
 
-      Console.WriteLine();
-      Console.WriteLine("Growth Phase: "+ value.ToString());
-      Console.WriteLine();
       ContributionGrowthPhase = value;
       if (ContributionGrowthPhase == 6) {
         Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine("Oh no! The web site is having problems.");
         Console.WriteLine("Web site visitors are experiencing errors when they try to make an online contributions.");
-        Console.WriteLine("Don't worry. We are going to wake up Bob, the IT guy, and have have fix the issue, lickity split.");
+        Console.WriteLine("Don't worry. We are going to find Luther Ray, the IT guy, and have him fix the issue, lickity split.");
+        Console.WriteLine();
       }
       if (ContributionGrowthPhase == 7) {
         Console.WriteLine();
-        Console.WriteLine();
-        Console.WriteLine("OK,I found we found and fixed the problem.");
-        Console.WriteLine("We're going to restart this bad boy and see if we can suck in some serious constributions.");
+        Console.WriteLine("Hey, it's Luther Ray, here");
+        Console.WriteLine("OK, I found the problem and we got 'er all fixed up.");
+        Thread.Sleep(2000);
+        Console.WriteLine("We're gonna restart this bad boy");
+        Console.WriteLine("and then we should be back in business..");
         Thread.Sleep(2000);
         Console.WriteLine("Web site has successfully restarted...");
         Thread.Sleep(1000);
         Console.WriteLine("Connection to credit card authority established...");
         Thread.Sleep(1000);
-        Console.WriteLine("We're back in business");
+        Console.WriteLine("System is now operational and ready to accept contributions...");
         Console.WriteLine();
         Console.WriteLine();
       }
@@ -79,7 +79,7 @@ namespace PowerBiRestAPI {
 
       switch (ContributionGrowthPhase) {
         case 1:
-          if (RandomNumberFactory.Next(1, 100) > 70) { Gender = "M"; }
+          if (RandomNumberFactory.Next(1, 100) > 36) { Gender = "M"; }
           break;
         case 2:
           if (RandomNumberFactory.Next(1, 100) > 72) { Gender = "M"; }
@@ -120,7 +120,7 @@ namespace PowerBiRestAPI {
 
       string LastName = GetNextLastName();
 
-      string TimeValue = DateTime.Now.ToString("hh:mm") + ":" + ((DateTime.Now.Second / 10) * 10).ToString("00");
+      string TimeValue = DateTime.Now.ToString("h:mm") + ":" + ((DateTime.Now.Second / 30) * 30).ToString("00");
 
       ContributionData newContribution = new ContributionData {
         ID = contributionId,
@@ -139,19 +139,11 @@ namespace PowerBiRestAPI {
     #region " static fields with arrays of field values"
 
     private static LocationData[] ContributionLocations1 = new LocationData[]{
-     new LocationData{ City="Odessa", State="FL", ZipCode=33556 },
-     new LocationData{ City="Odessa", State="FL", ZipCode=33556 },
-       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
-       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
-       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
-      new LocationData{ City="Lutz", State="FL", ZipCode=33548 },
-      new LocationData{ City="Lutz", State="FL", ZipCode=33559 },
-      new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
       new LocationData{ City="Largo", State="FL", ZipCode=33774 },
+      new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Davis Island", State="FL", ZipCode=33606 },
-            new LocationData{ City="Largo", State="FL", ZipCode=33774 }
-
+      new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
+      new LocationData{ City="Lutz", State="FL", ZipCode=33559 }
     };
 
     private static LocationData[] ContributionLocations2 = new LocationData[]{
@@ -159,20 +151,17 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
-      new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
-      new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
-      new LocationData{ City="Lutz", State="FL", ZipCode=33548 },
-      new LocationData{ City="Lutz", State="FL", ZipCode=33559 },
+      new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
+      new LocationData{ City="Largo", State="FL", ZipCode=33774 },
+      new LocationData{ City="Davis Island", State="FL", ZipCode=33606 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-     new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-     new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-
-         };
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621},
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
+    };
 
     private static LocationData[] ContributionLocations3 = new LocationData[]{
-          new LocationData{ City="Westchase", State="FL", ZipCode=33626 },
-
+      new LocationData{ City="Westchase", State="FL", ZipCode=33626 },
       new LocationData{ City="Odessa", State="FL", ZipCode=33556 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
@@ -186,15 +175,14 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Carrollwood", State="FL", ZipCode=33625 },
       new LocationData{ City="Carrollwood", State="FL", ZipCode=33618 },
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-          new LocationData{ City="Davis Island", State="FL", ZipCode=33606 }
-
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
+      new LocationData{ City="Davis Island", State="FL", ZipCode=33606 }
     };
 
     private static LocationData[] ContributionLocations4 = new LocationData[] {
-     new LocationData{ City="Odessa", State="FL", ZipCode=33556 },
+      new LocationData{ City="Odessa", State="FL", ZipCode=33556 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
@@ -209,9 +197,8 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Carrollwood", State="FL", ZipCode=33618 },
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 }
@@ -234,7 +221,6 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 }
@@ -257,14 +243,12 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34683 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34684 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="Oldsmar", State="FL", ZipCode=33635 },
       new LocationData{ City="Davis Island", State="FL", ZipCode=33606 }
     };
 
@@ -285,14 +269,12 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34683 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34684 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="Oldsmar", State="FL", ZipCode=33635 },
       new LocationData{ City="Odessa", State="FL", ZipCode=33556 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
       new LocationData{ City="Lutz", State="FL", ZipCode=33558 },
@@ -309,22 +291,19 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34683 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34684 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="Oldsmar", State="FL", ZipCode=33635 },
-          new LocationData{ City="Town N Country", State="FL", ZipCode=33615 },
+      new LocationData{ City="Town N Country", State="FL", ZipCode=33615 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33634 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33610 },
       new LocationData{ City="Clair Mel City", State="FL", ZipCode=33619 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33607 },
-          new LocationData{ City="Palma Ceia", State="FL", ZipCode=33629 },
-      new LocationData{ City="Clearwater", State="FL", ZipCode=33767 },
-      new LocationData{ City="Belleair", State="FL", ZipCode=33756 }
+      new LocationData{ City="Palma Ceia", State="FL", ZipCode=33629 },
+      new LocationData{ City="Clearwater", State="FL", ZipCode=33767 }
     };
 
     private static LocationData[] ContributionLocations8 = new LocationData[] {
@@ -344,28 +323,23 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34683 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34684 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="Oldsmar", State="FL", ZipCode=33635 },
       new LocationData{ City="Town N Country", State="FL", ZipCode=33615 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33634 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33610 },
       new LocationData{ City="Clair Mel City", State="FL", ZipCode=33619 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33607 },
-      new LocationData{ City="Beach Park", State="FL", ZipCode=33609 },
       new LocationData{ City="Palma Ceia", State="FL", ZipCode=33629 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33767 },
-      new LocationData{ City="Belleair", State="FL", ZipCode=33756 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33764 },
       new LocationData{ City="Indian Rocks Beach", State="FL", ZipCode=33786 },
       new LocationData{ City="Largo", State="FL", ZipCode=33774 },
       new LocationData{ City="St Petersburg", State="FL", ZipCode=33709 }
-
     };
 
     private static LocationData[] ContributionLocations9 = new LocationData[] {
@@ -385,23 +359,19 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34683 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34684 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="Oldsmar", State="FL", ZipCode=33635 },
       new LocationData{ City="Town N Country", State="FL", ZipCode=33615 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33634 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33610 },
       new LocationData{ City="Clair Mel City", State="FL", ZipCode=33619 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33607 },
-      new LocationData{ City="Beach Park", State="FL", ZipCode=33609 },
       new LocationData{ City="Palma Ceia", State="FL", ZipCode=33629 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33767 },
-      new LocationData{ City="Belleair", State="FL", ZipCode=33756 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33764 },
       new LocationData{ City="Indian Rocks Beach", State="FL", ZipCode=33786 },
       new LocationData{ City="Largo", State="FL", ZipCode=33774 },
@@ -422,12 +392,10 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Belleair Bluffs", State="FL", ZipCode=33770 }
-
     };
 
     private static LocationData[] ContributionLocations10 = new LocationData[] {
@@ -447,23 +415,19 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34683 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34684 },
       new LocationData{ City="Palm Harbor", State="FL", ZipCode=34685 },
-      new LocationData{ City="Oldsmar", State="FL", ZipCode=33635 },
       new LocationData{ City="Town N Country", State="FL", ZipCode=33615 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33634 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33610 },
       new LocationData{ City="Clair Mel City", State="FL", ZipCode=33619 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33607 },
-      new LocationData{ City="Beach Park", State="FL", ZipCode=33609 },
       new LocationData{ City="Palma Ceia", State="FL", ZipCode=33629 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33767 },
-      new LocationData{ City="Belleair", State="FL", ZipCode=33756 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33764 },
       new LocationData{ City="Indian Rocks Beach", State="FL", ZipCode=33786 },
       new LocationData{ City="Largo", State="FL", ZipCode=33774 },
@@ -484,29 +448,22 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34689},
       new LocationData{ City="Tarpon Springs", State="FL", ZipCode=34688 },
       new LocationData{ City="Lake Magdalene", State="FL", ZipCode=33613 },
-      new LocationData{ City="North Tampa", State="FL", ZipCode=33612 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33617 },
       new LocationData{ City="Tampa Palms", State="FL", ZipCode=33647 },
       new LocationData{ City="Thonotosassa", State="FL", ZipCode=33592 },
       new LocationData{ City="Belleair Bluffs", State="FL", ZipCode=33770 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33634 },
-      new LocationData{ City="Leto", State="FL", ZipCode=33614 },
-      new LocationData{ City="Seminole Heights", State="FL", ZipCode=33604 },
       new LocationData{ City="Temple Terrace", State="FL", ZipCode=33610 },
       new LocationData{ City="Clair Mel City", State="FL", ZipCode=33619 },
-      new LocationData{ City="University of Tampa", State="FL", ZipCode=33606 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33602 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33607 },
-      new LocationData{ City="Beach Park", State="FL", ZipCode=33609 },
       new LocationData{ City="Palma Ceia", State="FL", ZipCode=33629 },
-      new LocationData{ City="Ballast Pointe", State="FL", ZipCode=33611 },
       new LocationData{ City="Tampa", State="FL", ZipCode=33616 },
-      new LocationData{ City="MacDill Air Force Base", State="FL", ZipCode=33621 },
+      new LocationData{ City="Macdill Air Force Base, Port Tampa", State="FL", ZipCode=33621 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33767 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33755 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33765 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33759 },
-      new LocationData{ City="Belleair", State="FL", ZipCode=33756 },
       new LocationData{ City="Clearwater", State="FL", ZipCode=33764 },
       new LocationData{ City="Indian Rocks Beach", State="FL", ZipCode=33786 },
       new LocationData{ City="Belleair Bluffs", State="FL", ZipCode=33770 },
@@ -524,7 +481,6 @@ namespace PowerBiRestAPI {
       new LocationData{ City="Apollo Beach", State="FL", ZipCode=33572 },
       new LocationData{ City="RiverView", State="FL", ZipCode=33569 }
     };
-
 
     private static string[] FemaleFirstNames = new string[] {
         "Abby", "Abigail", "Ada", "Addie", "Adela", "Adele", "Adeline", "Adrian", "Adriana", "Adrienne", "Agnes", "Aida", "Aileen", "Aimee", "Aisha", "Alana",
@@ -592,7 +548,6 @@ namespace PowerBiRestAPI {
         "Winifred", "Winnie", "Yesenia", "Yolanda", "Young", "Yvette", "Yvonne", "Zelma"
     };
     private static string[] MaleFirstNames = new string[] {
-
         "Aaron", "Abdul", "Abe", "Abel", "Abraham", "Abram", "Adam", "Adolfo",
         "Adrian", "Ahmed", "Al", "Alan", "Albert", "Alberto", "Alden", "Alec", "Alejandro", "Alex", "Alexander", "Alexis", "Alfonzo", "Alfred", "Allan", "Alonso",
         "Alonzo", "Alphonse", "Alphonso", "Alton", "Alva", "Alvaro", "Alvin", "Amado", "Ambrose", "Amos", "Anderson", "Andre", "Andrea", "Andres", "Andrew", "Andy",
@@ -741,9 +696,11 @@ namespace PowerBiRestAPI {
     #endregion
 
     public static IEnumerable<ContributionData> GetContributionList() {
+
       contributionListsCount += 1;
-      if (contributionListsCount == 2) { SetContributionGrowthPhase(2); }
-      if (contributionListsCount == 5) { SetContributionGrowthPhase(3); }
+
+      if (contributionListsCount == 7) { SetContributionGrowthPhase(2); }
+      if (contributionListsCount == 21) { SetContributionGrowthPhase(3); }
       if (contributionListsCount == 30) { SetContributionGrowthPhase(4); }
       if (contributionListsCount == 45) { SetContributionGrowthPhase(5); }
       if (contributionListsCount == 60) { SetContributionGrowthPhase(6); }
@@ -752,15 +709,14 @@ namespace PowerBiRestAPI {
       if (contributionListsCount == 120) { SetContributionGrowthPhase(9); }
       if (contributionListsCount == 135) { SetContributionGrowthPhase(10); }
 
-
       int ContributionCount = 1;
 
       switch (ContributionGrowthPhase) {
         case 1:
-          ContributionCount = 12;
+          ContributionCount = 1;
           break;
         case 2:
-          ContributionCount = 18;
+          ContributionCount = 8;
           break;
         case 3:
           ContributionCount = RandomNumberFactory.Next(15, 30);
@@ -855,12 +811,12 @@ namespace PowerBiRestAPI {
 
     private static decimal GetNextContributionAmount(int Zipcode) {
 
-      if(ContributionGrowthPhase==6) {
+      if (ContributionGrowthPhase == 6) {
         return 25;
       }
 
       if (Zipcode.Equals(33621)) {
-        return 25;
+        return 50;
       }
 
       decimal[] contributionAmounts = ContributionAmounts;
@@ -869,11 +825,11 @@ namespace PowerBiRestAPI {
       if (BiggerContributors.Contains(Zipcode)) {
         contributionAmounts = BiggerContributionAmounts;
       }
+
       int[] BigShotContributors = { 33629, 33621, 33713, 33709, 33760, 36299, 33606, 33709, 33713, 33710, 33770 };
       if (BigShotContributors.Contains(Zipcode)) {
         contributionAmounts = BigShotContributionAmounts;
       }
-
 
       int index = RandomNumberFactory.Next(0, contributionAmounts.Length);
       return contributionAmounts[index];
@@ -884,11 +840,11 @@ namespace PowerBiRestAPI {
     };
 
     private static decimal[] BiggerContributionAmounts = new decimal[] {
-      25, 50, 50, 100, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 250, 250, 250, 250, 250, 250, 250, 250, 250, 500, 500, 750, 750, 1000, 1000, 2500
+      25, 50, 50, 100, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 250, 250, 250, 250, 250, 250, 250, 250, 250, 500, 500, 1000, 1000, 2500
     };
 
     private static decimal[] BigShotContributionAmounts = new decimal[] {
-      100, 250, 250, 250, 250, 250, 250, 500, 500, 500, 500, 500, 500, 750, 750, 750, 750, 750, 750, 1000, 1000, 1000, 1000, 2500, 2500, 3000, 5000, 10000
+      100, 250, 250, 250, 250, 250, 250, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 1000, 1000, 1000, 1000, 2500, 2500, 5000, 10000
     };
 
 

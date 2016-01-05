@@ -9,6 +9,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.IO;
+using System.Threading;
 
 namespace PowerBiRestAPI.Models {
 
@@ -72,7 +73,6 @@ namespace PowerBiRestAPI.Models {
 
     #region "REST Operation utility methods"
 
-
     private string ExecuteGetRequest(string restUri) {
 
       HttpClient client = new HttpClient();
@@ -92,18 +92,28 @@ namespace PowerBiRestAPI.Models {
 
     private string ExecutePostRequest(string restUri, string postBody) {
 
-      HttpContent body = new StringContent(postBody);
-      body.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/json");
-      HttpClient client = new HttpClient();
-      client.DefaultRequestHeaders.Add("Accept", "application/json");
-      client.DefaultRequestHeaders.Add("Authorization", "Bearer " + AccessToken);
-      HttpResponseMessage response = client.PostAsync(restUri, body).Result;
+      try {
+        HttpContent body = new StringContent(postBody);
+        body.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/json");
+        HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Accept", "application/json");
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + AccessToken);
+        HttpResponseMessage response = client.PostAsync(restUri, body).Result;
 
-      if (response.IsSuccessStatusCode) {
-        return response.Content.ReadAsStringAsync().Result;
+        if (response.IsSuccessStatusCode) {
+          return response.Content.ReadAsStringAsync().Result;
+        }
+        else {
+          Console.WriteLine();
+          Console.WriteLine("ERROR during REST call with POST");
+          Console.WriteLine();
+          return string.Empty;
+        }
       }
-      else {
+      catch {
+        Console.WriteLine();
         Console.WriteLine("ERROR during REST call with POST");
+        Console.WriteLine();
         return string.Empty;
       }
     }
@@ -129,36 +139,8 @@ namespace PowerBiRestAPI.Models {
       GetAccessToken();
     }
 
-    public void DisplayDatasets() {
-
-      Console.WriteLine();
-      Console.WriteLine("DisplayDatasets executing");
-
-      string restUrlDatasets = rootUrlPowerBiService + "datasets/";
-
-      string json = ExecuteGetRequest(restUrlDatasets);
-      Console.WriteLine(json);
-      Console.WriteLine();
-
-      DatasetCollection datasets = JsonConvert.DeserializeObject<DatasetCollection>(json);
-      foreach (var ds in datasets.value) {
-        string jsonDataset = ExecuteGetRequest(restUrlDatasets + ds.id + "/tables/");
-        Console.WriteLine(ds.id);
-        Console.WriteLine(ds.name);
-        Console.WriteLine(jsonDataset);
-        Console.WriteLine();
-      }
-      //var TenantDetailsList = JObject.Parse(json).SelectToken("value").ToObject<List<AzureTenantDetails>>();
-      //var TenantDetails = TenantDetailsList.FirstOrDefault();
-      //Console.WriteLine(" - Display Name: " + TenantDetails.displayName);
-      //Console.WriteLine(" - Tenant City : " + TenantDetails.city);
-      //Console.WriteLine(" - Tenant Phone: " + TenantDetails.telephoneNumber);
-    }
-
-    public bool DatasetExist(string datasetName) {
-      string restUrlDatasets = rootUrlPowerBiService + "datasets/";
-
-      string json = ExecuteGetRequest(restUrlDatasets);
+    private bool DatasetExist(string datasetName) {
+      string json = ExecuteGetRequest(rootUrlPowerBiService + "datasets/");
       DatasetCollection datasets = JsonConvert.DeserializeObject<DatasetCollection>(json);
       foreach (var ds in datasets.value) {
         if (ds.name.Equals(datasetName)) {
@@ -166,36 +148,31 @@ namespace PowerBiRestAPI.Models {
           return true;
         }
       }
-
       return false;
     }
 
-    string ContributionsDatasetId = string.Empty;
+    private string ContributionsDatasetId = string.Empty;
 
     public void CreateDataset() {
-
       string datasetName = "Campaign Contributions";
       if (DatasetExist(datasetName)) {
-        Console.WriteLine("Dataset already exists");
         DeleteRows();
         PopulateHelperTables();
+        Console.WriteLine("Connecting to Power BI Dataset named '" + datasetName + "'...");
+        Thread.Sleep(1500);
+        Console.WriteLine("Connected to " + datasetName + " dataset");
+        Console.WriteLine();
         return;
       }
-
-      Console.WriteLine("Creating Dataset...");
       string restUrlDatasets = rootUrlPowerBiService + "datasets";
       string jsonNewDataset = Properties.Resources.NewDataset_json;
 
       string json = ExecutePostRequest(restUrlDatasets, jsonNewDataset);
       Dataset dataset = JsonConvert.DeserializeObject<Dataset>(json);
 
-      ContributionsDatasetId = dataset.id;
-
-      Console.WriteLine("Dataset Created with ID of " + dataset.id);
-      Console.WriteLine();
-
+      ContributionsDatasetId = dataset.id;      
       PopulateHelperTables();
-
+      Console.WriteLine("Creating new Power BI Dataset named " + datasetName + "...");
     }
 
     public void PopulateHelperTables() {
@@ -214,19 +191,14 @@ namespace PowerBiRestAPI.Models {
     }
 
     public void DeleteRows() {
-      Console.WriteLine("Deleting rows...");
-
       string restUrlDatasets = rootUrlPowerBiService + "datasets";
       string restUrlTableRows = string.Format("{0}/{1}/tables/Contributions/rows", restUrlDatasets, ContributionsDatasetId);
       string json = ExecuteDeleteRequest(restUrlTableRows);
-
     }
 
     public void AddRows() {
       Console.Write(".");
-
       List<Contribution> contributionList = new List<Contribution>();
-
       foreach (var contribution in DataFactory.GetContributionList()) {
         contributionList.Add(new Contribution {
           ContributionID = contribution.ID,
@@ -252,22 +224,5 @@ namespace PowerBiRestAPI.Models {
 
     }
 
-    public void CreateSampleCSV() {
-      Console.WriteLine("Create Sample CSV file...");
-
-      Directory.CreateDirectory(@"C:\Data");
-      var writer = File.CreateText(@"C:\Data\Contributions.csv");
-      writer.WriteLine("ID,Name,City,State,Zipcode,Gender,Amount");
-
-      foreach (var contribution in DataFactory.GetContributionList()) {
-        writer.WriteLine(contribution.ID.ToString() + "," +
-                         contribution.FirstName + " " + contribution.LastName + "," +
-                         contribution.City + "," + contribution.State + "," + contribution.ZipCode + "," +
-                         contribution.Gender + "," + contribution.Amount.ToString("C"));
-      }
-
-      writer.Flush();
-      writer.Dispose();
-    }
   }
 }

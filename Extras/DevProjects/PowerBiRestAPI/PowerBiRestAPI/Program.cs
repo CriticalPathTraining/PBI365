@@ -13,32 +13,51 @@ namespace PowerBiRestAPI {
 
     static void Main(string[] args) {
 
-      PowerBiWorkspaceManager workspace = new PowerBiWorkspaceManager();
-      //workspace.CreateSampleCSV();
-      //return;
+      Console.WriteLine("Starting up Contributions web site..");
+      Thread.Sleep(2000);
+      Console.WriteLine("Web site has successfully restarted");
+      Console.WriteLine();
+      Thread.Sleep(1500);
+      Console.WriteLine("Connecting to credit card authority...");
+      Thread.Sleep(2500);
+      Console.WriteLine("Connection to credit card authority established");
+      Console.WriteLine();
+      Thread.Sleep(1000);
+      Console.WriteLine("Connecting to Power BI workspace...");
+      Thread.Sleep(1000);
 
-      // workspace.DisplayDatasets();
+      PowerBiWorkspaceManager workspace = new PowerBiWorkspaceManager();
       workspace.CreateDataset();
-      workspace.AddRows();
-      Thread.Sleep(5000);
-      workspace.AddRows();
-      Thread.Sleep(5000);
-      workspace.AddRows();
-      Thread.Sleep(2000);
-      workspace.AddRows();
-      Thread.Sleep(2000);
-      workspace.AddRows();
-      Thread.Sleep(2000);
+
+      Console.WriteLine("Connection to Power BI workspace established");
+      Thread.Sleep(1000);
+      Console.WriteLine();
+      Console.WriteLine("System is now operational and ready to accept contributions...");
+      Console.WriteLine();
 
       int counter = 1;
 
-      while (counter < 150) {
+      while (counter < 7) {
+        workspace.AddRows();
+        counter += 1;
+        Thread.Sleep(10000);
+      }
+
+
+      while (counter < 21) {
+        workspace.AddRows();
+        counter += 1;
+        Thread.Sleep(3000);
+      }
+      
+      while (counter < 160) {
         workspace.AddRows();
         counter += 1;
         Thread.Sleep(1500);
       }
 
-      Console.WriteLine("Contribution web site has been shut down since the goal has been reached");
+      Console.WriteLine();
+      Console.WriteLine("Contribution web site is now shuting down since the contribution goal has been reached");
       Console.ReadLine();
     }
   }
