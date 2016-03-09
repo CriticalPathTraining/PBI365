@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +65,11 @@
     <Compile Include="Models\WingtipSalesModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -75,8 +81,44 @@
     <EmbeddedResource Include="Migrations\201510182054093_FirstTime.resx">
       <DependentUpon>201510182054093_FirstTime.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ProductImages\WP0001_jpg" />
+    <None Include="Resources\ProductImages\WP0002_jpg" />
+    <None Include="Resources\ProductImages\WP0003_jpg" />
+    <None Include="Resources\ProductImages\WP0004_jpg" />
+    <None Include="Resources\ProductImages\WP0005_jpg" />
+    <None Include="Resources\ProductImages\WP0006_jpg" />
+    <None Include="Resources\ProductImages\WP0007_jpg" />
+    <None Include="Resources\ProductImages\WP0008_jpg" />
+    <None Include="Resources\ProductImages\WP0009_jpg" />
+    <None Include="Resources\ProductImages\WP0010_jpg" />
+    <None Include="Resources\ProductImages\WP0011_jpg" />
+    <None Include="Resources\ProductImages\WP0012_jpg" />
+    <None Include="Resources\ProductImages\WP0013_jpg" />
+    <None Include="Resources\ProductImages\WP0014_jpg" />
+    <None Include="Resources\ProductImages\WP0015_jpg" />
+    <None Include="Resources\ProductImages\WP0016_jpg" />
+    <None Include="Resources\ProductImages\WP0017_jpg" />
+    <None Include="Resources\ProductImages\WP0018_jpg" />
+    <None Include="Resources\ProductImages\WP0019_jpg" />
+    <None Include="Resources\ProductImages\WP0020_jpg" />
+    <None Include="Resources\ProductImages\WP0021_jpg" />
+    <None Include="Resources\ProductImages\WP0022_jpg" />
+    <None Include="Resources\ProductImages\WP0023_jpg" />
+    <None Include="Resources\ProductImages\WP0024_jpg" />
+    <None Include="Resources\ProductImages\WP0025_jpg" />
+    <None Include="Resources\ProductImages\WP0026_jpg" />
+    <None Include="Resources\ProductImages\WP0027_jpg" />
+    <None Include="Resources\ProductImages\WP0028_jpg" />
+    <None Include="Resources\ProductImages\WP0029_jpg" />
+    <None Include="Resources\ProductImages\WP0030_jpg" />
+    <None Include="Resources\ProductImages\WP0031_jpg" />
+    <None Include="Resources\ProductImages\WP0032_jpg" />
     <Content Include="SQL\RecreateTableIndexes.sql" />
     <Content Include="SQL\RecreateTablesWithoutIndexes.sql" />
     <Content Include="SQL\RecreateTables.sql" />

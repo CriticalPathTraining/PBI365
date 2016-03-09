@@ -75,6 +75,7 @@ namespace WingtipDataGenerator.Models {
     public string Color { get; set; }
     public Nullable<int> MinimumAge { get; set; }
     public Nullable<int> MaximumAge { get; set; }
+    public byte[] ProductImage { get; set; }
 
     public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
   }
