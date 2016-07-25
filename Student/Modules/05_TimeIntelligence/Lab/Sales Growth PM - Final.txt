@@ -1,12 +1,20 @@
 Sales Growth PM = 
-DIVIDE(
-  SUM(Sales[SalesAmount]) -
-  CALCULATE(
-    SUM(Sales[SalesAmount]),
-    PREVIOUSMONTH(Calendar[Date])
+IF(
+  ( 
+    ISFILTERED(Calendar[Month]) && 
+    NOT(ISFILTERED(Calendar[Date])) && 
+    [Previous Month Is Valid] 
   ), 
-  CALCULATE(
-    SUM(Sales[SalesAmount]),
-    PREVIOUSMONTH(Calendar[Date])
-  )
+  DIVIDE( 
+    SUM(Sales[SalesAmount]) -
+    CALCULATE(
+      SUM(Sales[SalesAmount]),
+      PREVIOUSMONTH(Calendar[Date])
+    ), 
+    CALCULATE(
+      SUM(Sales[SalesAmount]),
+      PREVIOUSMONTH(Calendar[Date])
+    )
+  ),
+  BLANK()
 )

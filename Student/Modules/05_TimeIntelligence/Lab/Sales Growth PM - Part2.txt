@@ -1,9 +1,7 @@
 Sales Growth PM = 
-  IF(
-    ISFILTERED(Calendar[Month]) && 
-    NOT(ISFILTERED(Calendar[Date]))
-  ), 
-  DIVIDE(  
+IF(
+  ( ISFILTERED(Calendar[Month]) && NOT(ISFILTERED(Calendar[Date])) ), 
+  DIVIDE( 
     SUM(Sales[SalesAmount]) -
     CALCULATE(
       SUM(Sales[SalesAmount]),
