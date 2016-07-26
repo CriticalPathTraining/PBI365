@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0412FC45-A614-426E-9E03-09E6D9F66AE5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WingtipDataGenerator</RootNamespace>
+    <AssemblyName>WingtipDataGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataFactory.cs" />
+    <Compile Include="Migrations\201510182054093_FirstTime.cs" />
+    <Compile Include="Migrations\201510182054093_FirstTime.Designer.cs">
+      <DependentUpon>201510182054093_FirstTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\WingtipSales.cs" />
+    <Compile Include="Models\WingtipSalesModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510182054093_FirstTime.resx">
+      <DependentUpon>201510182054093_FirstTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProductImages\WP0001_jpg" />
+    <None Include="Resources\ProductImages\WP0002_jpg" />
+    <None Include="Resources\ProductImages\WP0003_jpg" />
+    <None Include="Resources\ProductImages\WP0004_jpg" />
+    <None Include="Resources\ProductImages\WP0005_jpg" />
+    <None Include="Resources\ProductImages\WP0006_jpg" />
+    <None Include="Resources\ProductImages\WP0007_jpg" />
+    <None Include="Resources\ProductImages\WP0008_jpg" />
+    <None Include="Resources\ProductImages\WP0009_jpg" />
+    <None Include="Resources\ProductImages\WP0010_jpg" />
+    <None Include="Resources\ProductImages\WP0011_jpg" />
+    <None Include="Resources\ProductImages\WP0012_jpg" />
+    <None Include="Resources\ProductImages\WP0013_jpg" />
+    <None Include="Resources\ProductImages\WP0014_jpg" />
+    <None Include="Resources\ProductImages\WP0015_jpg" />
+    <None Include="Resources\ProductImages\WP0016_jpg" />
+    <None Include="Resources\ProductImages\WP0017_jpg" />
+    <None Include="Resources\ProductImages\WP0018_jpg" />
+    <None Include="Resources\ProductImages\WP0019_jpg" />
+    <None Include="Resources\ProductImages\WP0020_jpg" />
+    <None Include="Resources\ProductImages\WP0021_jpg" />
+    <None Include="Resources\ProductImages\WP0022_jpg" />
+    <None Include="Resources\ProductImages\WP0023_jpg" />
+    <None Include="Resources\ProductImages\WP0024_jpg" />
+    <None Include="Resources\ProductImages\WP0025_jpg" />
+    <None Include="Resources\ProductImages\WP0026_jpg" />
+    <None Include="Resources\ProductImages\WP0027_jpg" />
+    <None Include="Resources\ProductImages\WP0028_jpg" />
+    <None Include="Resources\ProductImages\WP0029_jpg" />
+    <None Include="Resources\ProductImages\WP0030_jpg" />
+    <None Include="Resources\ProductImages\WP0031_jpg" />
+    <None Include="Resources\ProductImages\WP0032_jpg" />
+    <Content Include="SQL\RecreateTableIndexes.sql" />
+    <Content Include="SQL\RecreateTablesWithoutIndexes.sql" />
+    <Content Include="SQL\RecreateTables.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
