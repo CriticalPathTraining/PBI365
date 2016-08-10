@@ -1,2 +1,2 @@
-# PBI365
-Course files and resources for Critical Path Training course PBI365: Data Analytics and Reporting with Power BI
+# Course files for PBI365: Power BI Bootcamp
+This repository is used to maintain student files required when attending Power BI Bootcamp with Critical Path Training or one of our courseware licensing partners.
