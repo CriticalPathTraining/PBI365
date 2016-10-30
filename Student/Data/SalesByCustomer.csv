@@ -45,7 +45,7 @@ Adrienne Lawrence,CO,F,24,160
 Agnes Cox,NJ,F,24,429
 Agnes Fowler,NM,F,45,21
 Agnes Kirk,FL,F,79,367
-Agnes Rhodes,FL,F,72,490
+Agnes Rhodes,FL,F,22,490
 Ahmed Miranda,VA,M,33,259
 Ahmed Nieves,SC,M,23,409
 Ahmed Vega,MA,M,63,264
@@ -80,12 +80,12 @@ Alexis Blackwell,VA,F,47,100
 Alexis Carroll,CA,F,39,239
 Alexis Hess,CA,F,58,100
 Alexis Kennedy,PA,F,52,295
-Alexis Walsh,FL,F,53,146
+Alexis Walsh,FL,F,33,146
 Alfred Vinson,WA,M,33,120
 Alfreda Cohen,FL,F,77,59
 Alfreda Crawford,NY,F,44,287
 Alfreda Fuentes,TX,F,58,153
-Alfreda Mendoza,FL,F,60,270
+Alfreda Mendoza,FL,F,21,270
 Alfreda Whitfield,PA,F,24,683
 Alice Gates,FL,F,52,40
 Alice McLeod,TN,F,43,160
@@ -187,14 +187,14 @@ Angeline Bruce,TN,F,45,270
 Angeline Meyers,PA,F,38,140
 Angelique Bullock,CA,F,56,269
 Angelique Figueroa,TX,F,44,256
-Angelique Holcomb,FL,F,67,140
+Angelique Holcomb,FL,F,37,140
 Angelique Joseph,CA,F,39,52
 Angelique Miranda,WA,F,34,91
 Angelique Robinson,TX,F,66,290
 Angelita Blair,MA,F,33,95
 Angelo Garza,SC,M,60,70
 Angelo Joyner,CT,M,28,140
-Angelo Keller,FL,M,45,180
+Angelo Keller,FL,M,25,180
 Angelo Rogers,FL,M,95,464
 Angelo Sherman,FL,M,93,329
 Angelo Yang,AZ,M,70,80
@@ -242,7 +242,7 @@ Archie Ryan,TX,M,43,355
 Arden McFadden,NY,M,28,25
 Ariel Benton,CO,M,64,160
 Ariel Walton,TX,M,40,598
-Arlen Contreras,FL,M,69,40
+Arlen Contreras,FL,M,29,40
 Arlen Ferguson,TN,M,35,399
 Arlen Frank,GA,M,47,299
 Arlene Dodson,TX,F,81,132
@@ -392,7 +392,7 @@ Billie Summers,AL,F,47,120
 Billy Poole,TX,M,72,39
 Blaine Harrell,CT,M,68,177
 Blaine Porter,CA,M,52,82
-Blaine Ward,FL,M,45,486
+Blaine Ward,FL,M,35,486
 Blair Camacho,OH,M,48,131
 Blake McClure,NY,M,54,120
 Blanca Bryan,GA,F,57,120
@@ -531,7 +531,7 @@ Byron Daniels,CA,M,35,530
 Caitlin Klein,TX,F,61,125
 Caitlin McClure,OR,F,36,358
 Caitlin Schroeder,AZ,F,73,327
-Caitlin Sims,FL,F,51,301
+Caitlin Sims,FL,F,19,301
 Caleb Norris,FL,M,75,30
 Caleb Pacheco,GA,M,58,15
 Caleb Valentine,TX,M,79,73
@@ -852,7 +852,7 @@ Danielle Garner,GA,F,58,112
 Danielle Nash,NC,F,42,205
 Danielle Randolph,TX,F,55,283
 Danilo Dillard,GA,M,25,100
-Dannie Chaney,FL,M,80,78
+Dannie Chaney,FL,M,20,78
 Danny Irwin,TX,M,62,211
 Dante Cole,NC,M,22,394
 Dante Savage,PA,M,49,327
@@ -938,7 +938,7 @@ Deloris Nolan,GA,F,42,10
 Demarcus Gonzalez,CA,M,57,309
 Demetrius Fox,CT,M,52,559
 Dena Estrada,WA,F,69,253
-Denise McClain,FL,F,89,140
+Denise McClain,FL,F,39,140
 Dennis Walter,FL,M,75,20
 Dennis Weaver,AL,M,57,837
 Denny Wilkerson,CA,M,60,319
@@ -983,7 +983,7 @@ Dina Moss,WA,F,64,344
 Dino Hunt,TX,M,58,320
 Dion Cooley,NC,M,66,215
 Dionne McIntosh,GA,F,29,100
-Dionne Newton,FL,F,48,439
+Dionne Newton,FL,F,28,439
 Dirk Page,NY,M,29,20
 Dixie Bolton,SC,F,35,229
 Dollie Higgins,NC,F,54,235
@@ -1014,7 +1014,7 @@ Dora Brewer,CT,F,36,329
 Dora Rocha,TN,F,29,270
 Dorian Stephens,VA,M,73,386
 Doris Gilliam,TX,F,69,120
-Doris Holder,FL,F,73,13
+Doris Holder,FL,F,23,13
 Doris Oneill,AZ,F,82,13
 Doris Peters,TX,F,67,299
 Dorothea Bauer,TN,F,25,664
@@ -1207,7 +1207,7 @@ Ericka Atkins,TX,F,84,175
 Ericka Battle,CA,F,77,304
 Ericka Gamble,TN,F,35,13
 Erik Jackson,TX,M,28,239
-Erin Buck,FL,M,42,60
+Erin Buck,FL,M,22,60
 Erin Juarez,RI,F,62,40
 Erin Lester,FL,M,48,443
 Erma Logan,VA,F,56,176
@@ -1339,7 +1339,7 @@ Franklin Frost,NY,M,71,117
 Franklin Good,NC,M,36,863
 Franklyn Crawford,FL,M,68,224
 Franklyn Jensen,FL,M,60,700
-Fred McClain,FL,M,72,26
+Fred McClain,FL,M,32,26
 Fred Olson,NC,M,39,299
 Freddie Kirkland,TN,M,37,65
 Freddie Murphy,NY,M,73,300
@@ -1640,7 +1640,7 @@ Ike Stevenson,WA,M,49,295
 Ila Lamb,VA,F,77,339
 Ilene Bradford,NY,F,57,160
 Imelda Ellis,GA,F,59,156
-Imelda McCall,FL,F,97,191
+Imelda McCall,FL,F,37,191
 Imogene Collins,NJ,F,66,150
 Imogene Hancock,NY,F,38,120
 Imogene Mendez,NC,F,54,122
@@ -1939,7 +1939,7 @@ Jonathon Whitley,TX,M,38,252
 Joni Hooper,GA,F,24,490
 Joni Owens,NY,F,47,404
 Jordan Rosales,TN,M,26,117
-Jordan Valdez,FL,M,75,40
+Jordan Valdez,FL,M,25,40
 Jordon Rosa,SC,M,28,217
 Jordon Schneider,TX,M,40,852
 Jorge Blackwell,VA,M,26,104
@@ -2252,7 +2252,7 @@ Lee Ortiz,NC,M,73,113
 Lee Sanchez,CT,F,44,65
 Leif Hunt,FL,M,74,168
 Leigh Beck,WA,M,25,405
-Leigh Glenn,FL,F,95,490
+Leigh Glenn,FL,F,35,490
 Leigh Small,FL,F,67,250
 Leigh Vincent,NY,M,30,540
 Leila Barker,CT,F,65,70
@@ -2552,7 +2552,7 @@ Marco Osborn,NM,M,38,250
 Marcos Barker,LA,M,49,150
 Marcos Munoz,MA,M,58,70
 Marcos Powell,TX,M,54,90
-Marcus Carver,FL,M,52,386
+Marcus Carver,FL,M,36,386
 Marcus Hunter,VA,M,70,180
 Margaret Huffman,NC,F,24,80
 Margaret Preston,MA,F,30,255
@@ -2846,7 +2846,7 @@ Naomi Keller,AL,F,33,130
 Naomi Lowery,NC,F,35,435
 Naomi McPherson,NC,F,58,40
 Naomi Vang,CA,F,47,205
-Napoleon Washington,FL,M,85,100
+Napoleon Washington,FL,M,25,100
 Natalia Deleon,NJ,F,76,1135
 Natalia Sanchez,NY,F,54,140
 Natasha Erickson,FL,F,51,40
@@ -3181,7 +3181,7 @@ Richie Chen,FL,M,84,52
 Richie Wise,UT,M,28,281
 Rick Richardson,AZ,M,50,669
 Rickey Burton,CT,M,72,638
-Rickie Riley,FL,M,72,349
+Rickie Riley,FL,M,22,349
 Rico Flores,RI,M,24,293
 Rigoberto Middleton,TX,M,35,744
 Rigoberto Murray,FL,M,46,1160
@@ -3308,7 +3308,7 @@ Rusty Dennis,CT,M,33,546
 Rusty Lynn,FL,M,91,639
 Rusty Sawyer,WA,M,67,220
 Ruthie Castillo,LA,F,38,344
-Ruthie Mathews,FL,F,68,389
+Ruthie Mathews,FL,F,38,389
 Ryan Potter,TX,M,79,13
 Ryan Santos,TX,M,48,240
 Sadie Dorsey,WA,F,55,85
@@ -3432,7 +3432,7 @@ Sheryl Garrison,TX,F,84,560
 Sheryl Morse,MA,F,61,238
 Shirley Lloyd,FL,F,50,240
 Shirley Puckett,FL,M,84,237
-Shon Quinn,FL,M,87,205
+Shon Quinn,FL,M,27,205
 Sid Stanton,FL,M,62,50
 Sid Sutton,NY,M,32,521
 Sidney Snider,TN,M,47,434
@@ -3623,7 +3623,7 @@ Tonia Hughes,FL,F,75,1638
 Tonia Nichols,NC,F,52,415
 Tony Mendoza,PA,M,51,240
 Tony Wright,VA,M,72,117
-Tonya Knowles,FL,F,87,312
+Tonya Knowles,FL,F,37,312
 Tonya Peck,TN,F,66,74
 Tory Hines,VA,M,39,479
 Tracey Dorsey,CA,F,73,140
@@ -3810,7 +3810,7 @@ Wilton Knox,OR,M,46,200
 Wilton Nash,TX,M,48,360
 Wilton Neal,FL,M,73,210
 Wilton Snow,NM,M,37,262
-Winfred James,FL,M,73,1089
+Winfred James,FL,M,23,1089
 Winfred Kirk,OH,M,53,232
 Winfred Young,VA,M,34,211
 Winifred Kaufman,TX,F,52,299
