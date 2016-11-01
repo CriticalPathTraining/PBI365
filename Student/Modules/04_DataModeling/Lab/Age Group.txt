@@ -1,0 +1,9 @@
+Age Group = 
+  SWITCH( TRUE(),
+    [Age] >= 65, "Ages 65 and over",
+    [Age] >= 50, "Ages 50 TO 65",
+    [Age] >= 40, "Ages 40 TO 49",
+    [Age] >= 30, "Ages 30 TO 39",
+    [Age] >= 18, "Ages 18 TO 29",
+    [Age] < 18, "Ages under 18"
+)
