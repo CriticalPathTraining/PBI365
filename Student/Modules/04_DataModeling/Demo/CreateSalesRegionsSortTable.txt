@@ -1,0 +1,8 @@
+SalesRegionsSort = 
+DATATABLE (
+  "Sales Region", STRING, 
+  "SalesRegionSort", INTEGER, {
+ { "Western Region", 1 },
+ { "Central Region", 2 },	
+ { "Eastern Region", 3 }
+})
