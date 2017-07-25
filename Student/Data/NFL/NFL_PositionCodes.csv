@@ -1,0 +1,62 @@
+Position Code,Position,Category,Side
+FB,Fullback,Backs and Receivers,Offense
+FB/DT,Fullback,Backs and Receivers,Offense
+FB/LB,Fullback,Backs and Receivers,Offense
+HB,Halfback,Backs and Receivers,Offense
+H-B,Halfback,Backs and Receivers,Offense
+QB,Quarterback,Backs and Receivers,Offense
+RB,Running Back,Backs and Receivers,Offense
+RB/RS,Running Back,Backs and Receivers,Offense
+RB/WR,Running Back,Backs and Receivers,Offense
+TE,Tight End,Backs and Receivers,Offense
+TE/FB,Tight End,Backs and Receivers,Offense
+TE/LS,Tight End,Backs and Receivers,Offense
+TE/WR,Tight End,Backs and Receivers,Offense
+WR,Wide Receiver,Backs and Receivers,Offense
+WR/KR,Wide Receiver,Backs and Receivers,Offense
+WR/RS,Wide Receiver,Backs and Receivers,Offense
+C,Center,Offensive Line,Offense
+C/G,Center,Offensive Line,Offense
+C-G,Center,Offensive Line,Offense
+G,Guard,Offensive Line,Offense
+G / T,Guard,Offensive Line,Offense
+G/C,Guard,Offensive Line,Offense
+G/T,Guard,Offensive Line,Offense
+G-T,Guard,Offensive Line,Offense
+OG,Guard,Offensive Line,Offense
+OL,Offensive Lineman,Offensive Line,Offense
+OT,Offensive Tackle,Offensive Line,Offense
+T,Offensive Tackle,Offensive Line,Offense
+T/G,Offensive Tackle,Offensive Line,Offense
+H,Holder,Special Teams,Offense
+K,Kicker,Special Teams,Offense
+LS,Long Snapper,Special Teams,Offense
+P,Punter,Special Teams,Offense
+CB,Cornerback,Defensive Backs,Defense
+DB,Defensive Back,Defensive Backs,Defense
+DB/RS,Defensive Back,Defensive Backs,Defense
+FS,Safety,Defensive Backs,Defense
+S,Safety,Defensive Backs,Defense
+SS,Safety,Defensive Backs,Defense
+DE,Defensive End,Defensive Line,Defense
+DL,Defensive Lineman,Defensive Line,Defense
+DT,Defensive Tackle,Defensive Line,Defense
+NT,Nose Tackle,Defensive Line,Defense
+ILB,Inside Lineback,Linebackers,Defense
+LB,Linebacker,Linebackers,Defense
+LB/DE,Linebacker,Linebackers,Defense
+LB/S,Linebacker,Linebackers,Defense
+MLB,Middle Linebacker,Linebackers,Defense
+OLB,Outside Linebacker,Linebackers,Defense
+WLB,Linebacker,Linebackers,Defense
+SAF,Safety,Defensive Backs,Defense
+SP,Safety,Defensive Backs,Defense
+ST,Special Teams,Special Teams,Offense
+WR-KR,Wide Receiver,Backs and Receivers,Offense
+RT,Offensive Tackle,Offensive Line,Offense
+LT,Offensive Tackle,Offensive Line,Offense
+$LT,Offensive Tackle,Offensive Line,Offense
+LG,Offensive Guard,Offensive Line,Offense
+RG,Offensive Guard,Offensive Line,Offense
+DB/LB,Defensive Back,Defensive Backs,Defense
+DL/LB,Defensive Lineman,Defensive Line,Defense
