@@ -1,8 +1,0 @@
-Product Rank = 
-IF( 
-  HASONEVALUE(Products[Product]), 
-  RANKX( 
-    ALL( Products[Subcategory], Products[Product], Products[Product Image] ), 
-    CALCULATE( SUM(Sales[SalesAmount]) )
-  )
-)

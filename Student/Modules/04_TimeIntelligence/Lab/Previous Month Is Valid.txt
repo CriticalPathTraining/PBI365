@@ -1,0 +1,2 @@
+Previous Month Is Valid = 
+  FIRSTDATE(PREVIOUSMONTH('Calendar'[Date])) >= FIRSTDATE(ALL(Sales[PurchaseDate]))
