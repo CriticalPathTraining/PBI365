@@ -28,8 +28,8 @@ This repository is used to maintain the student files required when attending Po
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Dashboards/Lab.xps)
 
 - Lab 7: Distributing Content using a Power BI App
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_AppWorkspacs/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_AppWorkspacs/Lab.xps)
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_AppWorkspaces/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_AppWorkspaces/Lab.xps)
 
 - Lab 8: Working with Data Sources, Gateways and DirectQuery
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/08_Gateways/Lab.pdf)
