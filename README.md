@@ -7,29 +7,25 @@ This repository is used to maintain the student files required when attending Po
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/01_IntroToPowerBI/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/01_IntroToPowerBI/Lab.xps)
 
-- Lab 2: Getting Started with Power BI Desktop
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/02_PowerBIDesktop/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/02_PowerBIDesktop/Lab.xps)
+- Lab 2: Designing Queries to Extract and Transform Data
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/02_Queries/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/02_Queries/Lab.xps)
 
-- Lab 3: Designing Queries to Extract and Transform Data
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/03_Queries/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/03_Queries/Lab.xps)
+- Lab 3: Designing a Data Model in Power BI Desktop
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/03_DataModeling/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/03_DataModeling/Lab.xps)
 
-- Lab 4: Designing a Data Model in Power BI Desktop
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_DataModeling/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_DataModeling/Lab.xps)
+- Lab 4: Modeling Data with Hierarchies and Time Intelligence
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_TimeIntelligence/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_TimeIntelligence/Lab.xps)
 
-- Lab 5: Modeling Data with Hierarchies and Time Intelligence
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_TimeIntelligence/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_TimeIntelligence/Lab.xps)
+- Lab 5: Designing Interactive Reports in Power BI Desktop
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_Reports/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_Reports/Lab.xps)
 
-- Lab 6: Designing Interactive Reports in Power BI Desktop
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Reports/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Reports/Lab.xps)
-
-- Lab 7: Creating and Deploying Dashboards in Power BI
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_Dashboards/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_Dashboards/Lab.xps)
+- Lab 6: Creating and Sharing Dashboards in Power BI
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Dashboards/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Dashboards/Lab.xps)
 
 - Lab 8: Designing Dashboards for Mobile Devices
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/08_Mobile/Lab.pdf)
