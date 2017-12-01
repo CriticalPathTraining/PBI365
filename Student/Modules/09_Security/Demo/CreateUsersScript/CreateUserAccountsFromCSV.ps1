@@ -1,9 +1,9 @@
 Clear-Host 
 
 # update the next three lines with values from your Office 365 tenant
-$classroomDomainName = "pbibc"
-$globalAdminAccountName = "student"
-$globalAdminPassword = "Wacko@43"
+$classroomDomainName = "YOUR_AAD_TENANT"
+$globalAdminAccountName = "YOUR_USER_ACCOUNT"
+$globalAdminPassword = "YOUR_PASSWORD"
 
 $classroomDomain = $classroomDomainName + ".onMicrosoft.com"
 $classroomSharePointRootSite = "https://" + $classroomDomainName + ".sharepoint.com"
