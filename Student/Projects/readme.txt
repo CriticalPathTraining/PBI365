@@ -1,1 +1,0 @@
-You will add PBIX project files into this folder as you do your lab work.
