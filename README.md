@@ -3,35 +3,35 @@ This repository is used to maintain the student files required when attending Po
 
 ### Live Lab Exercise Instructions
 
-- Lab 1: Getting Up and Running with the Power BI Service
+- Lab 01: Getting Up and Running with the Power BI Service
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/01_IntroToPowerBI/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/01_IntroToPowerBI/Lab.xps)
 
-- Lab 2: Designing Queries to Extract and Transform Data
+- Lab 02: Designing Queries to Extract and Transform Data
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/02_Queries/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/02_Queries/Lab.xps)
 
-- Lab 3: Designing a Data Model in Power BI Desktop
+- Lab 03: Designing a Data Model in Power BI Desktop
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/03_DataModeling/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/03_DataModeling/Lab.xps)
 
-- Lab 4: Modeling Data with Hierarchies and Time Intelligence
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_TimeIntelligence/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_TimeIntelligence/Lab.xps)
+- Lab 04: Designing Interactive Reports in Power BI Desktop
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_Reports/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/04_Reports/Lab.xps)
 
-- Lab 5: Designing Interactive Reports in Power BI Desktop
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_Reports/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_Reports/Lab.xps)
+- Lab 05: Creating Dashboards in the Power BI Service
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_Dashboards/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/05_Dashboards/Lab.xps)
 
-- Lab 6: Creating and Sharing Dashboards in Power BI
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Dashboards/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Dashboards/Lab.xps)
+- Lab 06: Integrating Excel Workbooks with the Power BI Service
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Excel/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/06_Excel/Lab.xps)
 
 - Lab 7: Distributing Content using a Power BI App
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_AppWorkspaces/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/07_AppWorkspaces/Lab.xps)
 
-- Lab 8: Working with Data Sources, Gateways and DirectQuery
+- Lab 8: Working with Data Refresh, Gateways and DirectQuery
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/08_Gateways/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/08_Gateways/Lab.xps)
 
@@ -39,14 +39,14 @@ This repository is used to maintain the student files required when attending Po
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/09_Security/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/09_Security/Lab.xps)
 
-- Lab 10: Integrate Excel Workbooks with the Power BI Service
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/10_Excel/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/10_Excel/Lab.xps)
+- Lab 10: Leverage the Power BI Integration with R
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/10_IntroToR/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/10_IntroToR/Lab.xps)
 
-- Lab 11: Leverage the Power BI Integration with R
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/11_IntroToR/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/11_IntroToR/Lab.xps)
+- Lab 11: Getting Started with PowerApps
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/11_PowerApps/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/11_PowerApps/Lab.xps)
 
-- Lab 12: Create a Real-time Dashboard using Microsoft Flow
-  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/12_PowerAppsAndFlow/Lab.pdf)
-  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/12_PowerAppsAndFlow/Lab.xps)
+- Lab 12: Creating a Real-time Dashboard using Microsoft Flow
+  - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/12_Flow/Lab.pdf)
+  - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/12_Flow/Lab.xps)
