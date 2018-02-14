@@ -3,7 +3,7 @@ This repository is used to maintain the student files required when attending Po
 
 
 ### Get Setup for the PBI365 Lab Exercises
-- [Download PDF with Lab Setup Instructions](https://github.com/CriticalPathTraining/PBI365/blob/master/About%20The%20Labs.pdf)
+- [Download PDF with Lab Setup Instructions](https://github.com/CriticalPathTraining/PBI365/raw/master/About%20The%20Labs.pdf)
 - [Download ZIP Archive with Student Lab Files](https://github.com/CriticalPathTraining/PBI365/archive/master.zip)
 
 ### Live Lab Exercise Instructions
