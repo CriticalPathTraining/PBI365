@@ -1,0 +1,124 @@
+{
+    "name": "CPT Demo Report Theme",
+    "background": "#fff8dd",
+    "foreground": "#9F1B30",
+    "tableAccent": "#fbc737",
+    "dataColors": [
+        "#9F1B30",
+        "#D16B2C",
+        "#FEBF0F",
+        "#fdae61",
+        "#abdda4",
+        "#66c2a5",
+        "#3288bd",
+        "#5e4fa2",
+        "#bbbbbb",
+        "#999999",
+        "#666666",
+        "#333333"
+    ],
+    "visualStyles": {
+        "*": {
+            "*": {
+                "*": [
+                    {
+                        "fontSize": 8,
+                        "fontFamily": "Cambria Math",
+                        "color": {
+                            "solid": {
+                                "color": "#000000"
+                            }
+                        }
+                    }
+                ],
+                "general": [
+                    {
+                        "responsive": true
+                    }
+                ],
+                "plotArea": [
+                    {
+                        "transparency": 50
+                    }
+                ]
+            }
+        },
+        "barChart": {
+            "*": {
+                "general": [
+                    {
+                        "responsive": true
+                    }
+                ],
+                "legend": [
+                    {
+                        "show": true,
+                        "position": "Right",
+                        "showTitle": false,
+                        "labelColor": {
+                            "solid": {
+                                "color": "#9F1B30"
+                            }
+                        },
+                        "fontSize": 10,
+                        "fontFamily": "Cambria Math"
+                    }
+                ],
+                "categoryAxis": [
+                    {
+                        "show": true,
+                        "position": "Left",
+                        "labelColor": {
+                            "solid": {
+                                "color": "#000000"
+                            }
+                        },
+                        "fontSize": 10,
+                        "fontFamily": "Cambria Math",
+                        "showAxisTitle": false,
+                        "titleColor": {
+                            "solid": {
+                                "color": "#000000"
+                            }
+                        }
+                    }
+                ],
+                "valueAxis": [
+                    {
+                        "show": true,
+                        "axisScale": "linear",
+                        "labelColor": {
+                            "solid": {
+                                "color": "#000000"
+                            }
+                        },
+                        "fontSize": 10,
+                        "fontFamily": "Cambria Math",
+                        "labelPrecision": 2,
+                        "showAxisTitle": false,
+                        "axisStyle": "showUnitOnly",
+                        "titleColor": {
+                            "solid": {
+                                "color": "#000000"
+                            }
+                        },
+                        "titleFontSize": 10
+                    }
+                ],
+                "labels": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#000000"
+                            }
+                        },
+                        "labelPrecision": 2,
+                        "fontSize": 8,
+                        "fontFamily": "Arial Black"
+                    }
+                ]
+            }
+        }
+    }
+}

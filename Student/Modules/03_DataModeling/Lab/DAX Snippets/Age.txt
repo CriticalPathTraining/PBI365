@@ -1,0 +1,1 @@
+Age = Floor( (TODAY()-Customers[BirthDate])/365, 1)

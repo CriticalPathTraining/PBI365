@@ -1,8 +1,0 @@
-Pct of All Products = 
-DIVIDE(
-	SUM( Sales[SalesAmount] ),
-	CALCULATE(
-		Sum ( Sales[SalesAmount] ),
-		ALL( Products[Category], Products[Subcategory], Products[Product] )
-	)
-)
