@@ -2,8 +2,7 @@
 This repository is used to maintain the student files required when attending Power BI Bootcamp with Critical Path Training or one of our courseware licensing partners. Our goal is to update the student files monthly to keep in sync with the cloud cadence of the Power BI platform.
 
 
-### Student Lab Files
-- Getting Up and Running with the PBI365 Lab Exercises
+### Get Setup for the PBI365 Lab Exercises
 - [Download PDF with Lab Setup Instructions](https://github.com/CriticalPathTraining/PBI365/blob/master/About%20The%20Labs.pdf)
 - [Download ZIP Archive with Student Lab Files](https://github.com/CriticalPathTraining/PBI365/archive/master.zip)
 
