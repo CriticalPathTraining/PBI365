@@ -44,7 +44,7 @@ This repository is used to maintain the student files required when attending Po
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/09_Security/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/09_Security/Lab.xps)
 
-- Lab 10: Leverage the Power BI Integration with R
+- Lab 10: Getting Up and Running with R in Power BI
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/10_IntroToR/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/10_IntroToR/Lab.xps)
 
