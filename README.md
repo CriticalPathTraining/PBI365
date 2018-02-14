@@ -4,12 +4,11 @@ This repository is used to maintain the student files required when attending Po
 
 ### Get Setup for the PBI365 Lab Exercises
 - [Download PDF with Lab Setup Instructions](https://github.com/CriticalPathTraining/PBI365/raw/master/About%20The%20Labs.pdf)
-- [Download ZIP Archive with Student Lab Files](https://github.com/CriticalPathTraining/PBI365/archive/master.zip)
+- [Download ZIP Archive with Student Lab Files (about 300 MB in size)](https://github.com/CriticalPathTraining/PBI365/archive/master.zip)
 
 ### Live Lab Exercise Instructions
 
 - Lab 01: Getting Up and Running with the Power BI Service
-  - [View Online PDF](https://github.com/CriticalPathTraining/PBI365/blob/master/Student/Modules/01_IntroToPowerBI/Lab.pdf)
   - [Download PDF](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/01_IntroToPowerBI/Lab.pdf)
   - [Download XPS](https://github.com/CriticalPathTraining/PBI365/raw/master/Student/Modules/01_IntroToPowerBI/Lab.xps)
 
