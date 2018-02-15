@@ -1,0 +1,1 @@
+This is the folder in which you will create new projects during lab exercises.
