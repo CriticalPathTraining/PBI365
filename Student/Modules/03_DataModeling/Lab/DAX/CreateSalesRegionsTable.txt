@@ -1,4 +1,4 @@
-Sales Regions = 
+SalesRegions = 
 DATATABLE (
     "State", STRING, 
     "State Name", STRING, 
