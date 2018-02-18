@@ -1,0 +1,46 @@
+                 Wingtip Expenses from General Ledger for 2017 Q4
+                          Generated Jan 1, 2018
+
+Expenses for October 2017
+----------------------------------------------------------------------------------------
+  2017-10-01     $852.00              Operations    Verizon - Telephone and Internet
+  2017-10-02     $132.00         Office Supplies    Coffee Supplies
+  2017-10-03     $289.00              Operations    Electricity Bill
+  2017-10-10     $148.00         Office Supplies    Postage Stamps
+  2017-10-12     $600.00               Marketing    TV Advertisements - East Coast
+  2017-10-14    $1200.00              Operations    Cleaning Service
+  2017-10-15     $125.00              Operations    Water and City Utilities
+  2017-10-15     $500.00               Marketing    Google Ad Words
+  2017-10-15     $478.34         Office Supplies    Cleaning Supplies
+  2017-10-15     $550.00  Research & Development    Azure HDInsight Subscription
+  2017-10-17     $300.00               Marketing    TV Advertisements - West Coast
+  2017-10-20    $1620.00         Office Supplies    Toner Cartridges for Printer
+
+Expenses for November 2017
+----------------------------------------------------------------------------------------
+  2017-11-01     $785.00              Operations    Verizon - Telephone and Internet
+  2017-11-06     $345.00              Operations    Electricity Bill
+  2017-11-13    $1200.00              Operations    Cleaning Service
+  2017-11-15     $122.00              Operations    Water and City Utilities
+  2017-11-15     $500.00               Marketing    Google Ad Words
+  2017-11-15    $1450.00  Research & Development    Linux Server
+  2017-11-15     $560.00  Research & Development    Azure HDInsight Subscription
+  2017-11-18    $1450.00  Research & Development    Linux Server
+  2017-11-23     $700.00               Marketing    TV Advertisements - East Coast
+  2017-11-24     $400.00               Marketing    TV Advertisements - West Coast
+  2017-11-30      $80.00         Office Supplies    Printer Paper
+
+Expenses for December 2017
+----------------------------------------------------------------------------------------
+  2017-12-01     $968.00              Operations    Verizon - Telephone and Internet
+  2017-12-01     $132.00         Office Supplies    Coffee Supplies
+  2017-12-06     $341.00              Operations    Electricity Bill
+  2017-12-10    $1200.00              Operations    Cleaning Service
+  2017-12-10     $500.00               Marketing    TV Advertisements - East Coast
+  2017-12-10    $3200.00  Research & Development    Linux Turbo Server
+  2017-12-14     $300.00               Marketing    TV Advertisements - West Coast
+  2017-12-15     $122.00              Operations    Water and City Utilities
+  2017-12-15     $500.00               Marketing    Google Ad Words
+  2017-12-15     $812.30         Office Supplies    Cleaning Supplies
+  2017-12-15     $440.00  Research & Development    Azure HDInsight Subscription
+  2017-12-20      $82.00         Office Supplies    Printer Paper

@@ -1,0 +1,46 @@
+                 Wingtip Expenses from General Ledger for 2017 Q3
+                          Generated Oct 1, 2017
+
+Expenses for July 2017
+----------------------------------------------------------------------------------------
+  2017-07-02     $793.00              Operations    Verizon - Telephone and Internet
+  2017-07-03     $364.00              Operations    Electricity Bill
+  2017-07-05     $224.00         Office Supplies    Postage Stamps
+  2017-07-10    $1200.00              Operations    Cleaning Service
+  2017-07-14     $400.00               Marketing    TV Advertisements - West Coast
+  2017-07-15     $127.00              Operations    Water and City Utilities
+  2017-07-15    $2123.45               Marketing    Google Ad Words
+  2017-07-15     $560.00  Research & Development    Azure HDInsight Subscription
+  2017-07-16     $400.00               Marketing    TV Advertisements - East Coast
+  2017-07-30      $82.00         Office Supplies    Printer Paper
+  2017-07-30    $1200.00         Office Supplies    Toner Cartridges for Printer
+
+Expenses for August 2017
+----------------------------------------------------------------------------------------
+  2017-08-01     $939.00              Operations    Verizon - Telephone and Internet
+  2017-08-06     $344.00              Operations    Electricity Bill
+  2017-08-08     $122.50         Office Supplies    Coffee Supplies
+  2017-08-12     $400.00               Marketing    TV Advertisements - West Coast
+  2017-08-13    $1200.00              Operations    Cleaning Service
+  2017-08-14     $700.00               Marketing    TV Advertisements - East Coast
+  2017-08-15     $123.00              Operations    Water and City Utilities
+  2017-08-15    $3245.34               Marketing    Google Ad Words
+  2017-08-15     $389.08         Office Supplies    Cleaning Supplies
+  2017-08-15     $850.00  Research & Development    Toy Stress Tester
+  2017-08-15     $540.00  Research & Development    Azure HDInsight Subscription
+
+Expenses for September 2017
+----------------------------------------------------------------------------------------
+  2017-09-02     $856.00              Operations    Verizon - Telephone and Internet
+  2017-09-05     $322.00              Operations    Electricity Bill
+  2017-09-05     $132.00         Office Supplies    Coffee Supplies
+  2017-09-10     $850.00  Research & Development    Toy Stress Tester
+  2017-09-13    $1200.00              Operations    Cleaning Service
+  2017-09-13     $700.00               Marketing    TV Advertisements - East Coast
+  2017-09-13     $300.00               Marketing    TV Advertisements - West Coast
+  2017-09-15     $122.00              Operations    Water and City Utilities
+  2017-09-15     $500.00               Marketing    Google Ad Words
+  2017-09-15     $800.00         Office Supplies    Office chairs
+  2017-09-15     $430.00  Research & Development    Scientific Calculators
+  2017-09-15     $420.00  Research & Development    Azure HDInsight Subscription
+  2017-09-30      $60.00         Office Supplies    Printer Paper
