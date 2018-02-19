@@ -1,0 +1,43 @@
+                 Wingtip Expenses from General Ledger for 2017 Q2
+                          Generated July 1, 2017
+
+Expenses for April 2017
+----------------------------------------------------------------------------------------
+  2017-04-02     $925.00              Operations    Verizon - Telephone and Internet
+  2017-04-03     $142.00         Office Supplies    Postage Stamps
+  2017-04-05     $294.00              Operations    Electricity Bill
+  2017-04-05     $120.25         Office Supplies    Coffee Supplies
+  2017-04-13    $1200.00              Operations    Cleaning Service
+  2017-04-15     $126.00              Operations    Water and City Utilities
+  2017-04-15     $560.22               Marketing    Google Ad Words
+  2017-04-15     $414.45         Office Supplies    Cleaning Supplies
+  2017-04-15     $470.00  Research & Development    Azure HDInsight Subscription
+  2017-04-16     $700.00               Marketing    TV Advertisements - East Coast
+  2017-04-21     $300.00               Marketing    TV Advertisements - West Coast
+
+Expenses for May 2017
+----------------------------------------------------------------------------------------
+  2017-05-01    $1200.00         Office Supplies    Toner Cartridges for Printer
+  2017-05-01     $780.00  Research & Development    Toy Stress Tester
+  2017-05-02     $922.00              Operations    Verizon - Telephone and Internet
+  2017-05-04     $251.00              Operations    Electricity Bill
+  2017-05-12    $1200.00              Operations    Cleaning Service
+  2017-05-14     $600.00               Marketing    TV Advertisements - East Coast
+  2017-05-15     $125.00              Operations    Water and City Utilities
+  2017-05-15     $889.02               Marketing    Google Ad Words
+  2017-05-15     $550.00  Research & Development    Azure HDInsight Subscription
+  2017-05-24     $400.00               Marketing    TV Advertisements - West Coast
+  2017-05-30      $80.00         Office Supplies    Printer Paper
+
+Expenses for June 2017
+----------------------------------------------------------------------------------------
+  2017-06-02     $946.00              Operations    Verizon - Telephone and Internet
+  2017-06-03     $269.00              Operations    Electricity Bill
+  2017-06-07     $120.25         Office Supplies    Coffee Supplies
+  2017-06-11     $600.00               Marketing    TV Advertisements - East Coast
+  2017-06-12    $1200.00              Operations    Cleaning Service
+  2017-06-14     $300.00               Marketing    TV Advertisements - West Coast
+  2017-06-15     $123.00              Operations    Water and City Utilities
+  2017-06-15    $1420.22               Marketing    Google Ad Words
+  2017-06-15     $525.90         Office Supplies    Cleaning Supplies
+  2017-06-15     $530.00  Research & Development    Azure HDInsight Subscription

@@ -1,0 +1,46 @@
+                 Wingtip Expenses from General Ledger for 2017 Q1
+                          Generated April 1, 2017
+
+Expenses for January 2017
+----------------------------------------------------------------------------------------
+  2017-01-01     $923.00              Operations    Verizon - Telephone and Internet
+  2017-01-04     $338.00              Operations    Electricity Bill
+  2017-01-10    $1200.00              Operations    Cleaning Service
+  2017-01-10     $300.00               Marketing    TV Advertisements - West Coast
+  2017-01-15     $126.00              Operations    Water and City Utilities
+  2017-01-15     $428.32               Marketing    Google Ad Words
+  2017-01-15      $68.45         Office Supplies    Pencils & Paper clips
+  2017-01-15     $420.00  Research & Development    Azure HDInsight Subscription
+  2017-01-21     $400.00               Marketing    TV Advertisements - East Coast
+  2017-01-25     $840.25         Office Supplies    Coffee Supplies
+  2017-01-30     $480.00         Office Supplies    Printer Paper
+  2017-01-30     $340.00         Office Supplies    Postage Stamps
+
+Expenses for February 2017
+----------------------------------------------------------------------------------------
+  2017-02-02     $785.00              Operations    Verizon - Telephone and Internet
+  2017-02-05     $255.00              Operations    Electricity Bill
+  2017-02-07    $1800.00         Office Supplies    Office chairs
+  2017-02-13     $700.00               Marketing    TV Advertisements - East Coast
+  2017-02-13     $300.00               Marketing    TV Advertisements - West Coast
+  2017-02-14    $1200.00              Operations    Cleaning Service
+  2017-02-15     $124.00              Operations    Water and City Utilities
+  2017-02-15     $412.23               Marketing    Google Ad Words
+  2017-02-15     $268.45         Office Supplies    Cleaning Supplies
+  2017-02-15     $780.00  Research & Development    Toy Stress Tester
+  2017-02-15     $500.00  Research & Development    Azure HDInsight Subscription
+
+Expenses for March 2017
+----------------------------------------------------------------------------------------
+  2017-03-01     $896.00              Operations    Verizon - Telephone and Internet
+  2017-03-03     $122.50         Office Supplies    Coffee Supplies
+  2017-03-06     $275.00              Operations    Electricity Bill
+  2017-03-07    $3200.00         Office Supplies    Toner Cartridges for Printer
+  2017-03-11     $240.00  Research & Development    Scientific Calculators
+  2017-03-13    $1200.00              Operations    Cleaning Service
+  2017-03-15     $124.00              Operations    Water and City Utilities
+  2017-03-15     $540.22               Marketing    Google Ad Words
+  2017-03-15     $430.00  Research & Development    Azure HDInsight Subscription
+  2017-03-17     $400.00               Marketing    TV Advertisements - East Coast
+  2017-03-19     $300.00               Marketing    TV Advertisements - West Coast
+  2017-03-30      $72.00         Office Supplies    Printer Paper
