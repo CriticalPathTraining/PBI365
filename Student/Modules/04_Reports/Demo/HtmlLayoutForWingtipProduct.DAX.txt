@@ -1,0 +1,28 @@
+Product HTML Inline Layout = 
+VAR
+    MainDivFormatting = "display:inline-block;float:left;width:248px;height:160px;margin-left:4px;margin-right: 8px;margin-bottom:4px;"
+VAR
+    TableFormatting = "font-size:8px;border: 1px black solid;border-radius:4px;margin-bottom: 16px; "
+VAR
+    ImageCellFormatting = "padding: 4px;background-color:white;width:64px;max-width:64px;text-align:center;" 
+VAR
+    TitleCellFormatting = "padding: 4px;background-color:white;font-size:14px;line-height:14px;background-color:black;color:white;border-top-left-radius:4px;border-top-right-radius:4px"
+VAR
+    ImageFormatting = "width:38px;"
+VAR
+    DescriptionCellFormatting = "padding: 8px;font-size:12px;line-height:16px;background-color:lightyellow;color:darkblue;vertical-align:middle;height:48px;border-left: 1px solid #DDD;"
+VAR
+    LeftCellFormatting = "padding: 4px;background-color:white;width:48px;max-width:48px;text-align:right;border-top: 1px solid #DDD;"    
+VAR
+    RightCellFormatting = "padding: 4px;font-weight:bold;background-color:#EEE;width:200px;border: 1px solid #CCC;"
+RETURN
+"<div style='" & MainDivFormatting & "' >" &
+  "<table style='" & TableFormatting & "' >" & 
+    "<tr><td colspan='2' style='" & TitleCellFormatting & "'>" & [Product] & "</td></tr>" & 
+    "<tr><td style='" & ImageCellFormatting & "'><img src='" & [Product Image] & "' style='" & ImageFormatting & "' /></td>" & 
+         "<td style='" & DescriptionCellFormatting & "' > " & [Description] & "</td></tr>" & 
+    "<tr><td style='" & LeftCellFormatting & "' >Category:</td><td style='" & RightCellFormatting & "' > " & [Category] & " > " & [Subcategory] & "</td></tr>" &     
+    "<tr><td style='" & LeftCellFormatting & "' >List Price:</td><td style='" & RightCellFormatting & "' >" & FORMAT([ListPrice], "$#,###.00") & "</td><tr>" &
+    "<tr><td style='" & LeftCellFormatting & "' >Sales Revenue:</td><td style='" & RightCellFormatting & "' >" & FORMAT([Sales Revenue], "$#,###") & "</td><tr>" &    
+  "</table>" &
+"</div>"
