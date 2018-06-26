@@ -1,9 +1,9 @@
 Clear-Host 
 
 # update the next three lines with values from your Office 365 tenant
-$classroomDomainName = "YOUR_AAD_TENANT"
-$globalAdminAccountName = "YOUR_USER_ACCOUNT"
-$globalAdminPassword = "YOUR_PASSWORD"
+$classroomDomainName = "cpt0625"
+$globalAdminAccountName = "TedP"
+$globalAdminPassword = "Pa`$`$word!"
 
 $classroomDomain = $classroomDomainName + ".onMicrosoft.com"
 $classroomSharePointRootSite = "https://" + $classroomDomainName + ".sharepoint.com"
@@ -17,28 +17,50 @@ $e5LcenseSku = $classroomDomainName + ":ENTERPRISEPREMIUM"
 
 function New-User($firstName, $lastName, $alternateEmail) {
 
+ $displayName = $firstName + " " + $lastName
+
  $firstNameClean = $firstName -replace " ", ""
  $firstNameClean = $firstNameClean -replace "'", ""
  
  $lastNameClean = $lastName -replace " ", ""
  $lastNameClean = $lastNameClean -replace "'", ""
 
- $userPrincipalName = $firstNameClean + $lastNameClean.SubString(0,1) + "@" + $classroomDomain
- $userDisplayName = $firstName + " " + $lastName
- $password = "pass@word1"
+ $mailNickname = $firstNameClean + $lastNameClean.SubString(0,1)
+ $userPrincipalName =  $mailNickname + "@" + $classroomDomain
 
+ $password = "pass@word1"
+ $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
+ $passwordProfile.Password = $password
+
+ $secureStringPassword = ConvertTo-SecureString -String "pass@word1" -AsPlainText -Force
+ 
  # Create new user account for student 
- New-MsolUser -FirstName $firstName `
-              -LastName $lastName `
-              -UserPrincipalName $userPrincipalName `
-              -DisplayName $userDisplayName `
-              -UsageLocation "US" `
-              -UserType Member `
-              -LicenseAssignment $e5LcenseSku `
-              -AlternateEmailAddresses $alternateEmail `
-              -Password $password `
-              -PasswordNeverExpires $true `
-              -ForceChangePassword $false
+ $newUser = New-AzureADUser `
+                -DisplayName $displayName `
+                -GivenName $firstName `
+                -Surname $lastName `
+                -MailNickName $mailNickname `
+                -PasswordProfile $passwordProfile `
+                -PasswordPolicies "DisablePasswordExpiration, DisableStrongPassword" `
+                -UserPrincipalName $userPrincipalName `
+                -UsageLocation "US" `
+                -AccountEnabled $True
+
+
+ $licenseSkuPartNumber = 'ENTERPRISEPREMIUM'
+ $LicenseSku = Get-AzureADSubscribedSku | Where-Object {$_.SkuPartNumber -eq $licenseSkuPartNumber } 
+ 
+ #Create the AssignedLicense object with the License and DisabledPlans earlier created
+ $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
+ $License.SkuId = $LicenseSku.SkuId
+ 
+ #Create the AssignedLicenses Object 
+ $AssignedLicenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+ $AssignedLicenses.AddLicenses = $License
+ $AssignedLicenses.RemoveLicenses = @()
+
+ #Assign the license to the user
+ Set-AzureADUserLicense -ObjectId $newUser.ObjectId -AssignedLicenses $AssignedLicenses
 
  # write user info for student to log file
  "User: $userDisplayName" | Out-File $LogFilePath -Append
@@ -47,6 +69,7 @@ function New-User($firstName, $lastName, $alternateEmail) {
  "Alt Email: $alternateEmail" | Out-File $LogFilePath -Append
  "" | Out-File $LogFilePath -Append
  "" | Out-File $LogFilePath -Append
+
 }
 
 # create new log file 
@@ -58,7 +81,7 @@ $LogFilePath = ("{0}\UsersLog.txt" -f $PSScriptRoot)
 $credential = New-Object -TypeName System.Management.Automation.PSCredential `
                          -ArgumentList $globalAdminAccount, $globalAdminSecurePassword
 
-Connect-MsolService -Credential $credential
+Connect-AzureAD  -Credential $credential
 
 $UserDataFilePath = ("{0}\UserData.csv" -f $PSScriptRoot)
 $Users = Import-csv -path $UserDataFilePath

@@ -1,0 +1,11 @@
+Calendar = ADDCOLUMNS(
+    CALENDAR(DATE( YEAR( MIN(Sales[PurchaseDate]) ), 1, 1), Date( YEAR( MAX(Sales[PurchaseDate]) ), 12, 31)),
+    "Year", YEAR([Date]),
+    "Quarter", YEAR([Date]) & "-Q" & FORMAT([Date], "q"),
+    "Month",  FORMAT([Date], "MMM yyyy"),
+    "MonthSort", FORMAT([Date], "yyyy-MM"),
+    "Month in Year", FORMAT([Date], "MMM"),
+    "MonthInYearSort", MONTH([Date]),
+    "Day of Week", FORMAT([Date], "ddd"),
+    "DayOfWeekSort", WEEKDAY([Date], 2)
+)
