@@ -13,7 +13,7 @@ The student manual with the slides, notes and lab writeups for this training cou
 - [Download PDF with Lab Setup Instructions](https://github.com/CriticalPathTraining/PBI365/raw/master/About%20The%20Labs.pdf)
 
 ## Get the PBI365 Student Lab Files
-- [Download ZIP Archive with Student Lab Files (about 300 MB in size)](https://github.com/CriticalPathTraining/PBI365/archive/master.zip)
+- [Download ZIP Archive with Student Lab Files (about 250MB in size)](https://github.com/CriticalPathTraining/PBI365/archive/master.zip)
 
 ## More Info
 If you have additonal questions about this course or the student manual, please contact us at <info@CriticalPathTraining.com>.
