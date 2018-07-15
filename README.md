@@ -6,7 +6,7 @@ This repository is used to maintain the student files required when attending Po
 In order to receive the student manual you must register for Power BI Ceritifcation Bootcamp from Critical Path Training or one of their courseware licensing partners. 
 - [View a Sample of the Student Manual Online](https://github.com/CriticalPathTraining/PBI365/blob/master/StudentManualSample.pdf)
 - [Download a PDF Sample of the Student Manual](https://github.com/CriticalPathTraining/PBI365/raw/master/StudentManualSample.pdf)
-[View More Information About This Course](https://www.criticalpathtraining.com/courses/power-bi/power-bi-bootcamp/)
+- [View More Information About This Course](https://www.criticalpathtraining.com/courses/power-bi/power-bi-bootcamp/)
 
 ## Get Setup for the PBI365 Lab Exercises
 - [Download PDF with Lab Setup Instructions](https://github.com/CriticalPathTraining/PBI365/raw/master/About%20The%20Labs.pdf)
