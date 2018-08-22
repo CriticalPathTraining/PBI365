@@ -1,9 +1,9 @@
 Clear-Host 
 
 # update the next three lines with values from your Office 365 tenant
-$classroomDomainName = "cpt0625"
-$globalAdminAccountName = "TedP"
-$globalAdminPassword = "Pa`$`$word!"
+$classroomDomainName = "myTenant"
+$globalAdminAccountName = "student"
+$globalAdminPassword = "pass@word1"
 
 $classroomDomain = $classroomDomainName + ".onMicrosoft.com"
 $classroomSharePointRootSite = "https://" + $classroomDomainName + ".sharepoint.com"
@@ -31,6 +31,8 @@ function New-User($firstName, $lastName, $alternateEmail) {
  $password = "pass@word1"
  $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
  $passwordProfile.Password = $password
+ $passwordProfile.ForceChangePasswordNextLogin = $false
+ $passwordProfile.EnforceChangePasswordPolicy = $false
 
  $secureStringPassword = ConvertTo-SecureString -String "pass@word1" -AsPlainText -Force
  
