@@ -1,5 +1,6 @@
-Age Group = 
-  SWITCH( TRUE(),
+Age Group =
+SWITCH (
+    TRUE (),
     [Age] >= 65, "Ages 65 and over",
     [Age] >= 50, "Ages 50 TO 64",
     [Age] >= 40, "Ages 40 TO 49",
