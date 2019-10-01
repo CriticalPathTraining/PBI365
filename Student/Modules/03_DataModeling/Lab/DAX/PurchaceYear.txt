@@ -1,1 +1,0 @@
-PurchaseYear = YEAR(Sales[PurchaseDate]) 

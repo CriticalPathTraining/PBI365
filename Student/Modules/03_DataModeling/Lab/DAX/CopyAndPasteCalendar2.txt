@@ -1,6 +1,6 @@
 MyCalendar = 
-Var CalenderStart = Date(Year(Min(Sales[PurchaseDate])) , 1, 1)  
-Var CalendarEnd = Date(Year(MAX(Sales[PurchaseDate])), 12, 31)
+Var CalenderStart = Date(Year(Min(Sales[InvoiceDate])) , 1, 1)  
+Var CalendarEnd = Date(Year(MAX(Sales[InvoiceDate])), 12, 31)
 Return ADDCOLUMNS(
     CALENDAR(CalenderStart, CalendarEnd),
     "Year", Year([Date]),
