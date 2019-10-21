@@ -1,0 +1,10 @@
+(input as text) =>
+let
+    set1 = {"A".."Z"},
+    set2 = {"a".."z"},
+    set3 =  List.Transform({0..9}, each Number.ToText(_) ),
+    set4 = {" ", "-", "_", "."},
+    allowedChars = set1 & set2 & set3 & set4,
+    output = Text.Select(input, allowedChars)
+in
+    output
