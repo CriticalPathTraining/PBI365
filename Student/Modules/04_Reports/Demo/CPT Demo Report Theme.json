@@ -1,8 +1,8 @@
 {
     "name": "CPT Demo Report Theme",
-    "background": "#fff8dd",
-    "foreground": "#9F1B30",
-    "tableAccent": "#fbc737",
+    "background": "#FFFFFF",
+    "foreground": "#333333",
+    "tableAccent": "#CCCCFF",
     "dataColors": [
         "#9F1B30",
         "#D16B2C",
@@ -22,23 +22,12 @@
             "*": {
                 "*": [
                     {
-                        "fontSize": 8,
-                        "fontFamily": "Cambria Math",
-                        "color": {
-                            "solid": {
-                                "color": "#000000"
-                            }
-                        }
+                        "fontFamily": "Arial"
                     }
                 ],
                 "general": [
                     {
                         "responsive": true
-                    }
-                ],
-                "plotArea": [
-                    {
-                        "transparency": 50
                     }
                 ]
             }
