@@ -5,7 +5,7 @@ Return ADDCOLUMNS(
     CALENDAR(CalenderStart, CalendarEnd),
     "Year", Year([Date]),
     "Quarter", Year([Date]) & "-Q" & FORMAT([Date], "q"),
-    "Month", FORMAT([date], "MMM yyyy"),
+    "Month", FORMAT([Date], "MMM yyyy"),
     "MonthSort", Format([Date], "yyyy-MM"),
     "Month in Year", FORMAT([Date], "MMM"),
     "MonthInYearSort", MONTH([Date]),

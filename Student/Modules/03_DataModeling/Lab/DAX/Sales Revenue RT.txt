@@ -1,6 +1,6 @@
 Sales Revenue RT = 
 CALCULATE(
-    SUM(Sales[SalesAmount]),
+    [Sales Revenue],
     FILTER( 
         ALL('Calendar'), 
         'Calendar'[Date] <= MAX('Calendar'[Date]) 
